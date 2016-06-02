@@ -27,7 +27,7 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
             <nil key="simulatedBottomBarMetrics"/>
-            <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" selectedItem="mOS-Po-h3u" id="107">
+            <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" selectedItem="J09-kr-2wp" id="107">
                 <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -222,7 +222,7 @@
                         <color key="barTintColor" red="0.078431372550000003" green="0.1764705882" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <viewControllers>
-                        <viewController id="155" customClass="AlarmViewController">
+                        <viewController id="155" userLabel="Wake Up to Bristol Beat" customClass="AlarmViewController">
                             <view key="view" contentMode="scaleToFill" id="467">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,7 +341,7 @@
                                 <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <extendedEdge key="edgesForExtendedLayout"/>
-                            <navigationItem key="navigationItem" title="Wake Up to 98.7, The Song" id="Aka-DB-HDx"/>
+                            <navigationItem key="navigationItem" title="Wake Up to Bristol Beat" id="Aka-DB-HDx" userLabel="Wake Up to Bristol Beat"/>
                             <connections>
                                 <outlet property="btnSet" destination="468" id="487"/>
                                 <outlet property="datePicker" destination="470" id="VwN-8k-WK5"/>
