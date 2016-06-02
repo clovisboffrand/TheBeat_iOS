@@ -250,7 +250,6 @@
 		4A05E4121B5A2865000E7305 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4A05E4A91B5A290A000E7305 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = KXOJ/main.m; sourceTree = "<group>"; };
 		4A05E4AB1B5A2923000E7305 /* WJRS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "WJRS-Info.plist"; path = "KXOJ/WJRS-Info.plist"; sourceTree = "<group>"; };
-		4A05E4B11B5A30BF000E7305 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 		4A05E4B21B5A30BF000E7305 /* GAITrackingMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackingMethod.h; sourceTree = "<group>"; };
 		4A05E4B31B5A30BF000E7305 /* GAITrackingMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAITrackingMethod.m; sourceTree = "<group>"; };
 		4A05E4B41B5A30BF000E7305 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
@@ -451,10 +450,9 @@
 			isa = PBXGroup;
 			children = (
 				4A05E4C01B5A3108000E7305 /* XMLReader */,
-				4A05E4B11B5A30BF000E7305 /* Define.h */,
+				4A05E4B41B5A30BF000E7305 /* Header.h */,
 				4A05E4B21B5A30BF000E7305 /* GAITrackingMethod.h */,
 				4A05E4B31B5A30BF000E7305 /* GAITrackingMethod.m */,
-				4A05E4B41B5A30BF000E7305 /* Header.h */,
 				4A05E4BA1B5A30BF000E7305 /* UserDefault.h */,
 				4A05E4BB1B5A30BF000E7305 /* UserDefault.m */,
 				4A05E3891B5A2865000E7305 /* CommonHelpers.h */,
