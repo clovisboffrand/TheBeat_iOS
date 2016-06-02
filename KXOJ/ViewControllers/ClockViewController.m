@@ -82,11 +82,6 @@
     [self rotateView];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    GoogleTrackingBlock(self, CLASS_VC);
-}
-
 #pragma mark - Rotate View
 
 - (void)rotateView {

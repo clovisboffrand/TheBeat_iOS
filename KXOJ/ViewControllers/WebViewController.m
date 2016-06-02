@@ -37,11 +37,6 @@
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:WEB_URL]]];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    GoogleTrackingBlock(self, CLASS_VC);
-}
-
 #pragma mark - Setup Banner View
 
 - (void)addBanner {

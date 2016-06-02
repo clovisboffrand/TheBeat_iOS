@@ -37,7 +37,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    GoogleTrackingBlock(self, CLASS_VC);
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:IMAGE_URL]]];
@@ -167,41 +166,41 @@
 }
 
 - (IBAction)doSend:(id)sender {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *recDir = [paths objectAtIndex:0];
-    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@.m4a", recDir,@"Record"]];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    if (data) {
-        SHOW_INDICATOR(self.navigationController.view);
-        
-        AFHTTPRequestSerializer *requestSerializer = [AFHTTPRequestSerializer serializer];
-        NSMutableURLRequest *request = [requestSerializer multipartFormRequestWithMethod:@"POST" URLString:UPLOAD_LINK parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-            [formData appendPartWithFileData:data name:@"file" fileName:@"file.wav" mimeType:@"audio/wav"];
-        } error:nil];
-        
-        AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-        NSProgress *progress = nil;
-        
-        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-        
-        NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithStreamedRequest:request progress:&progress completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
-            if (error) {
-                NSLog(@"Error: %@", error);
-            } else {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"THANK YOU!" message:@"Thanks for sharing! Listen to 98.7 The Song and you might hear yourself on the radio!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                [alert show];
-            }
-            HIDE_INDICATOR(YES);
-        }];
-        
-        [uploadTask resume];
-        
-        // Observe fractionCompleted using KVO
-        [progress addObserver:self
-                   forKeyPath:@"fractionCompleted"
-                      options:NSKeyValueObservingOptionNew
-                      context:NULL];
-    }
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *recDir = [paths objectAtIndex:0];
+//    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@.m4a", recDir,@"Record"]];
+//    NSData *data = [NSData dataWithContentsOfURL:url];
+//    if (data) {
+//        SHOW_INDICATOR(self.navigationController.view);
+//        
+//        AFHTTPRequestSerializer *requestSerializer = [AFHTTPRequestSerializer serializer];
+//        NSMutableURLRequest *request = [requestSerializer multipartFormRequestWithMethod:@"POST" URLString:UPLOAD_LINK parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+//            [formData appendPartWithFileData:data name:@"file" fileName:@"file.wav" mimeType:@"audio/wav"];
+//        } error:nil];
+//        
+//        AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+//        NSProgress *progress = nil;
+//        
+//        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+//        
+//        NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithStreamedRequest:request progress:&progress completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+//            if (error) {
+//                NSLog(@"Error: %@", error);
+//            } else {
+//                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"THANK YOU!" message:@"Thanks for sharing! Listen to 98.7 The Song and you might hear yourself on the radio!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//                [alert show];
+//            }
+//            HIDE_INDICATOR(YES);
+//        }];
+//        
+//        [uploadTask resume];
+//        
+//        // Observe fractionCompleted using KVO
+//        [progress addObserver:self
+//                   forKeyPath:@"fractionCompleted"
+//                      options:NSKeyValueObservingOptionNew
+//                      context:NULL];
+//    }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {

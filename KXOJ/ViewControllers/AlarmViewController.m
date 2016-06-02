@@ -44,7 +44,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    GoogleTrackingBlock(self, CLASS_VC);
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *wakeuptime = [prefs objectForKey:@"wakeup"];

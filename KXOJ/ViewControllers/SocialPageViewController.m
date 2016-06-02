@@ -36,11 +36,6 @@
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.pageURL]]];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    GoogleTrackingBlock(self, CLASS_VC);
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

@@ -33,7 +33,6 @@
 
 #import "XMLConverter.h"
 #import "XMLDictionary.h"
-#import "GAITrackingMethod.h"
 
 #define CLASS_VC NSStringFromClass([self class])
 

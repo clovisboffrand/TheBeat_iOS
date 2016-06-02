@@ -16,33 +16,14 @@
 
 #pragma mark - Application lifecycle
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    if (ALLOW_GOOGLE_TRACKING)
-    {
-        //Google Analytics
-        [GAI sharedInstance].trackUncaughtExceptions = YES;
-        
-        // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
-        [GAI sharedInstance].dispatchInterval = 20;
-        
-        // Optional: set Logger to VERBOSE for debug information.
-        [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelInfo];
-        
-        // Initialize tracker.
-        [[GAI sharedInstance] trackerWithTrackingId:kGoogle_Tracking_ID];
-        
-        // End
-    }
-    
     if (UIDeviceModelIsIphone4()) {
         [[UIApplication sharedApplication] setStatusBarHidden:YES];
     } else {
         [[UIApplication sharedApplication] setStatusBarHidden:NO];
     }
     
-    tabBarController.delegate = self;
-    tabBarController.tabBar.tintColor = UIColorFromString(TINT_DEF_COLR, 1);
-    
-    sleep(2);
+    self.tabBarController.delegate = self;
+    self.tabBarController.tabBar.tintColor = UIColorFromString(TINT_DEF_COLR, 1);
     
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];

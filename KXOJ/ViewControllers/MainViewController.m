@@ -49,11 +49,6 @@
     [self addBanner];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    GoogleTrackingBlock(self, CLASS_VC);
-    [super viewDidAppear:animated];
-}
-
 - (void)addBanner {
     [_adWebView loadHTMLString:[CommonHelpers HTMLBodyOfBannerView] baseURL:nil];
 }
