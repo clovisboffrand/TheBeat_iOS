@@ -27,7 +27,7 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
             <nil key="simulatedBottomBarMetrics"/>
-            <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" selectedItem="J09-kr-2wp" id="107">
+            <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" selectedItem="517" id="107">
                 <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -604,57 +604,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" id="ehY-k3-HRz">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="210"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <subviews>
-                                            <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="bU6-tH-tI3">
-                                                <rect key="frame" x="0.0" y="146" width="320" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                <items>
-                                                    <barButtonItem image="arrow_right.png" style="plain" id="nqc-1X-xwY">
-                                                        <connections>
-                                                            <action selector="goBack:" destination="515" id="ZC4-Zw-wmf"/>
-                                                        </connections>
-                                                    </barButtonItem>
-                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MQt-KO-wy0"/>
-                                                    <barButtonItem image="reload_new.png" style="plain" id="e6z-dK-jmI">
-                                                        <connections>
-                                                            <action selector="doReload:" destination="515" id="QVF-jf-is3"/>
-                                                        </connections>
-                                                    </barButtonItem>
-                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0B1-ee-wmI"/>
-                                                    <barButtonItem image="arrow_left.png" style="plain" id="6V4-BU-b7x">
-                                                        <connections>
-                                                            <action selector="goNext:" destination="515" id="2hT-78-Anx"/>
-                                                        </connections>
-                                                    </barButtonItem>
-                                                </items>
-                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            </toolbar>
-                                            <webView opaque="NO" contentMode="scaleToFill" scalesPageToFit="YES" id="gTl-Vu-Z0k">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="210"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="515" id="4IZ-GJ-dSc"/>
-                                                </connections>
-                                            </webView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view hidden="YES" contentMode="scaleToFill" id="gt5-Vk-018">
-                                        <rect key="frame" x="0.0" y="143" width="320" height="67"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                        <subviews>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="jEI-sb-9bL">
-                                                <rect key="frame" x="0.0" y="2" width="320" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
-                                            </scrollView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xMa-nB-OD5">
                                         <rect key="frame" x="12" y="222" width="298" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -695,24 +644,20 @@
                                             <action selector="doSend:" destination="515" eventType="touchUpInside" id="3Ye-Ar-bLh"/>
                                         </connections>
                                     </button>
-                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="F55-eg-qFr">
-                                        <rect key="frame" x="142" y="85" width="37" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="color" red="0.95294117649999999" green="0.45098039220000002" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    </activityIndicatorView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoutoutimage.png" id="4Ex-fw-VIr">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="201"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <extendedEdge key="edgesForExtendedLayout"/>
                             <navigationItem key="navigationItem" title="Shout Out" id="516"/>
                             <connections>
-                                <outlet property="activityIndicator" destination="F55-eg-qFr" id="E3D-z3-TbK"/>
                                 <outlet property="btRecord" destination="3tg-jp-m7w" id="X10-Hw-ehn"/>
                                 <outlet property="btnPreview" destination="duW-17-oSH" id="FFL-fj-1wy"/>
                                 <outlet property="btnSample" destination="xMa-nB-OD5" id="1Zh-wX-cOL"/>
                                 <outlet property="btnSend" destination="Rvq-r8-iFp" id="7gk-Qa-5TI"/>
-                                <outlet property="scrSlide" destination="jEI-sb-9bL" id="dtd-cL-pFj"/>
-                                <outlet property="webview" destination="gTl-Vu-Z0k" id="9nF-RS-UJ7"/>
                             </connections>
                         </viewController>
                     </viewControllers>
@@ -751,6 +696,7 @@
         <image name="reload_new.png" width="25" height="25"/>
         <image name="samplebutton.png" width="298" height="41"/>
         <image name="sendbutton.png" width="298" height="41"/>
+        <image name="shoutoutimage.png" width="960" height="600"/>
         <image name="twitter.png" width="64" height="64"/>
         <image name="website.png" width="64" height="64"/>
     </resources>

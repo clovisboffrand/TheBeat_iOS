@@ -11,6 +11,7 @@
 		0910830B1D001D790088C319 /* ic_calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 091083081D001D790088C319 /* ic_calendar.png */; };
 		0910830C1D001D790088C319 /* ic_trophy.png in Resources */ = {isa = PBXBuildFile; fileRef = 091083091D001D790088C319 /* ic_trophy.png */; };
 		091083131D00256F0088C319 /* btn_set_alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = 091083121D00256F0088C319 /* btn_set_alarm.png */; };
+		091083151D00275A0088C319 /* shoutoutimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 091083141D00275A0088C319 /* shoutoutimage.png */; };
 		09717FA91D0009E600B992CF /* bg_radio_page.png in Resources */ = {isa = PBXBuildFile; fileRef = 09717FA81D0009E600B992CF /* bg_radio_page.png */; };
 		099079651BB84A6400A7F158 /* icon_web.png in Resources */ = {isa = PBXBuildFile; fileRef = 099079631BB84A6400A7F158 /* icon_web.png */; };
 		099079661BB84A6400A7F158 /* icon_web@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 099079641BB84A6400A7F158 /* icon_web@2x.png */; };
@@ -103,6 +104,7 @@
 		091083081D001D790088C319 /* ic_calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_calendar.png; sourceTree = "<group>"; };
 		091083091D001D790088C319 /* ic_trophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_trophy.png; sourceTree = "<group>"; };
 		091083121D00256F0088C319 /* btn_set_alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_set_alarm.png; sourceTree = "<group>"; };
+		091083141D00275A0088C319 /* shoutoutimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoutoutimage.png; sourceTree = "<group>"; };
 		093C3AEC1BB8797500E72B1B /* WJRS_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WJRS_Prefix.pch; sourceTree = "<group>"; };
 		09717FA81D0009E600B992CF /* bg_radio_page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_radio_page.png; sourceTree = "<group>"; };
 		099079631BB84A6400A7F158 /* icon_web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_web.png; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 		091083111D0020FC0088C319 /* ShoutOutTab */ = {
 			isa = PBXGroup;
 			children = (
+				091083141D00275A0088C319 /* shoutoutimage.png */,
 				4A05E3D01B5A2865000E7305 /* listenbutton.png */,
 				4A05E3D11B5A2865000E7305 /* listenbutton@2x.png */,
 				4A05E3E11B5A2865000E7305 /* recordbutton.png */,
@@ -648,6 +651,7 @@
 				4A05E4711B5A2865000E7305 /* recordbutton@2x.png in Resources */,
 				09717FA91D0009E600B992CF /* bg_radio_page.png in Resources */,
 				4A05E4551B5A2865000E7305 /* hourbg.png in Resources */,
+				091083151D00275A0088C319 /* shoutoutimage.png in Resources */,
 				4A05E47D1B5A2865000E7305 /* icon_social@2x.png in Resources */,
 				4A05E4E41B5AC97C000E7305 /* btn_back@2x.png in Resources */,
 				4A4965261B5B7A4E00E4CF2D /* icn_chanel.png in Resources */,
