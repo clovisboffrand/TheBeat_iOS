@@ -107,7 +107,6 @@
 		4A05E4981B5A2865000E7305 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4121B5A2865000E7305 /* MainViewController.m */; };
 		4A05E4AA1B5A290A000E7305 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4A91B5A290A000E7305 /* main.m */; };
 		4A05E4BD1B5A30BF000E7305 /* GAITrackingMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4B31B5A30BF000E7305 /* GAITrackingMethod.m */; };
-		4A05E4BE1B5A30BF000E7305 /* ICTColorRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4B61B5A30BF000E7305 /* ICTColorRandom.m */; };
 		4A05E4BF1B5A30BF000E7305 /* UserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4BB1B5A30BF000E7305 /* UserDefault.m */; };
 		4A05E4C51B5A3108000E7305 /* XMLConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4C21B5A3108000E7305 /* XMLConverter.m */; };
 		4A05E4C61B5A3108000E7305 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4C41B5A3108000E7305 /* XMLDictionary.m */; };
@@ -255,10 +254,6 @@
 		4A05E4B21B5A30BF000E7305 /* GAITrackingMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackingMethod.h; sourceTree = "<group>"; };
 		4A05E4B31B5A30BF000E7305 /* GAITrackingMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAITrackingMethod.m; sourceTree = "<group>"; };
 		4A05E4B41B5A30BF000E7305 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		4A05E4B51B5A30BF000E7305 /* ICTColorRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICTColorRandom.h; sourceTree = "<group>"; };
-		4A05E4B61B5A30BF000E7305 /* ICTColorRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICTColorRandom.m; sourceTree = "<group>"; };
-		4A05E4B81B5A30BF000E7305 /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
-		4A05E4B91B5A30BF000E7305 /* UITypedefDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITypedefDefinition.h; sourceTree = "<group>"; };
 		4A05E4BA1B5A30BF000E7305 /* UserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefault.h; sourceTree = "<group>"; };
 		4A05E4BB1B5A30BF000E7305 /* UserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefault.m; sourceTree = "<group>"; };
 		4A05E4C11B5A3108000E7305 /* XMLConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLConverter.h; sourceTree = "<group>"; };
@@ -460,10 +455,6 @@
 				4A05E4B21B5A30BF000E7305 /* GAITrackingMethod.h */,
 				4A05E4B31B5A30BF000E7305 /* GAITrackingMethod.m */,
 				4A05E4B41B5A30BF000E7305 /* Header.h */,
-				4A05E4B51B5A30BF000E7305 /* ICTColorRandom.h */,
-				4A05E4B61B5A30BF000E7305 /* ICTColorRandom.m */,
-				4A05E4B81B5A30BF000E7305 /* Notifications.h */,
-				4A05E4B91B5A30BF000E7305 /* UITypedefDefinition.h */,
 				4A05E4BA1B5A30BF000E7305 /* UserDefault.h */,
 				4A05E4BB1B5A30BF000E7305 /* UserDefault.m */,
 				4A05E3891B5A2865000E7305 /* CommonHelpers.h */,
@@ -853,7 +844,6 @@
 				09AD14E31C8DBD110089B204 /* AlarmViewController.m in Sources */,
 				4A05E4BF1B5A30BF000E7305 /* UserDefault.m in Sources */,
 				4A05E4C61B5A3108000E7305 /* XMLDictionary.m in Sources */,
-				4A05E4BE1B5A30BF000E7305 /* ICTColorRandom.m in Sources */,
 				4A05E42F1B5A2865000E7305 /* MyWindow.m in Sources */,
 				4A05E4C51B5A3108000E7305 /* XMLConverter.m in Sources */,
 				09AD14F11C8DCFD50089B204 /* SocialViewController.m in Sources */,

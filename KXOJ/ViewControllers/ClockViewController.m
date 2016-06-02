@@ -75,8 +75,6 @@
             lblAlarm.text=[NSString stringWithFormat:@"Alarm %@:%@ PM", displayhour, displaymin];
         }
     }
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTime) name:kNotiticationUpdateTimer object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -87,14 +85,6 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     GoogleTrackingBlock(self, CLASS_VC);
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:kNotiticationUpdateTimer object:nil];
 }
 
 #pragma mark - Rotate View

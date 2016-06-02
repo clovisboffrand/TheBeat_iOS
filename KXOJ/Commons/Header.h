@@ -8,7 +8,6 @@
 
 #import "CommonHelpers.h"
 #import "Radio99AppDelegate.h"
-#import "Notifications.h"
 #import "UserDefault.h"
 #import "Define.h"
 
@@ -34,8 +33,6 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SDWebImage/UIImage+GIF.h>
 
-#import "ICTColorRandom.h"
-#import "UITypedefDefinition.h"
 #import "NavigationBarCustom.h"
 
 #import "XMLConverter.h"
