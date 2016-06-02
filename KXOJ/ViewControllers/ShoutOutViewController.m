@@ -7,13 +7,10 @@
 //
 
 #import "ShoutOutViewController.h"
-
-#import "ShoutOutViewController.h"
 #import "Header.h"
 
-#define SAMPLE_LINK     @"http://www.radioserversapps.com/wqme/shoutout.mp3"
-#define IMAGE_URL       @"http://radioserversapps.com/wqme/shoutout.png"
-#define UPLOAD_LINK     @"http://radioserversapps.com/wqme/app/upload.php"
+#define SAMPLE_LINK @"http://www.bristolbeat.com/app/sample.mp3"
+#define UPLOAD_LINK @"http://radioserversapps.com/wqme/app/upload.php"
 
 @implementation ShoutOutViewController
 
@@ -22,75 +19,15 @@
     [self loadNib];
 }
 
-- (BOOL)webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
-    if ( inType == UIWebViewNavigationTypeLinkClicked ) {
-        [[UIApplication sharedApplication] openURL:[inRequest URL]];
-        return NO;
-    }
-    
-    return YES;
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:IMAGE_URL]]];
-    });
-}
-
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"playRadio" object:nil];
-}
-
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return YES;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"playRadio" object:nil];
 }
 
 #pragma mark - Method
 - (void)loadNib {
     INIT_INDICATOR;
-    isRecording=NO;
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    [activityIndicator stopAnimating];
-}
-
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-    [activityIndicator startAnimating];
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [activityIndicator stopAnimating];
-}
-
-#pragma mark - Button Action Methods
-
--(IBAction)goBack:(id)sender {
-    [self.webview goBack];
-}
-
-- (IBAction)goNext:(id)sender {
-    [self.webview goForward];
-}
-
-- (IBAction)doReload:(id)sender {
-    if (!activityIndicator.isAnimating)
-        [self.webview reload];
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    int pageWidth = self.scrSlide.frame.size.width;
-    int offset=self.scrSlide.contentOffset.x/pageWidth;
-    [self.scrSlide setContentOffset:CGPointMake(offset*pageWidth, 0)];
+    isRecording = NO;
 }
 
 - (void)startRecording {
@@ -106,10 +43,10 @@
     
     // Start recording
     [audioRecorder record];
-    isRecording=YES;
-    self.btnPreview.enabled=NO;
-    self.btnSample.enabled=NO;
-    self.btnSend.enabled=NO;
+    isRecording = YES;
+    self.btnPreview.enabled = NO;
+    self.btnSample.enabled = NO;
+    self.btnSend.enabled = NO;
     NSLog(@"recording");
 }
 
@@ -117,11 +54,12 @@
     [self.btRecord setImage:[UIImage imageNamed:@"recordbutton.png"] forState:UIControlStateNormal];
     
     NSLog(@"stopRecording");
-    isRecording=NO;
+    
+    isRecording = NO;
     [audioRecorder stop];
+    
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     [audioSession setCategory:AVAudioSessionCategoryAmbient error:nil];
-    
     [audioSession setActive:NO error:nil];
 }
 
@@ -132,10 +70,11 @@
 }
 
 - (IBAction)doRecord:(id)sender {
-    if (isRecording)
+    if (isRecording) {
         [self stopRecording];
-    else
+    } else {
         [self startRecording];
+    }
 }
 
 - (IBAction)doPreview:(id)sender {
@@ -166,48 +105,34 @@
 }
 
 - (IBAction)doSend:(id)sender {
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-//    NSString *recDir = [paths objectAtIndex:0];
-//    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@.m4a", recDir,@"Record"]];
-//    NSData *data = [NSData dataWithContentsOfURL:url];
-//    if (data) {
-//        SHOW_INDICATOR(self.navigationController.view);
-//        
-//        AFHTTPRequestSerializer *requestSerializer = [AFHTTPRequestSerializer serializer];
-//        NSMutableURLRequest *request = [requestSerializer multipartFormRequestWithMethod:@"POST" URLString:UPLOAD_LINK parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-//            [formData appendPartWithFileData:data name:@"file" fileName:@"file.wav" mimeType:@"audio/wav"];
-//        } error:nil];
-//        
-//        AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-//        NSProgress *progress = nil;
-//        
-//        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-//        
-//        NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithStreamedRequest:request progress:&progress completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
-//            if (error) {
-//                NSLog(@"Error: %@", error);
-//            } else {
-//                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"THANK YOU!" message:@"Thanks for sharing! Listen to 98.7 The Song and you might hear yourself on the radio!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//                [alert show];
-//            }
-//            HIDE_INDICATOR(YES);
-//        }];
-//        
-//        [uploadTask resume];
-//        
-//        // Observe fractionCompleted using KVO
-//        [progress addObserver:self
-//                   forKeyPath:@"fractionCompleted"
-//                      options:NSKeyValueObservingOptionNew
-//                      context:NULL];
-//    }
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"fractionCompleted"] && [object isKindOfClass:[NSProgress class]]) {
-        NSProgress *progress = (NSProgress *)object;
-        NSLog(@"Progress is %f", progress.fractionCompleted);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *recDir = [paths objectAtIndex:0];
+    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@.m4a", recDir, @"Record"]];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    
+    if (!data) {
+        return;
     }
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    SHOW_INDICATOR(self.navigationController.view);
+    [manager POST:UPLOAD_LINK parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:data name:@"file" fileName:@"file.wav" mimeType:@"audio/wav"];
+    } progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"upload success: %@", responseObject);
+        
+        HIDE_INDICATOR(YES);
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"THANK YOU!" message:@"Thanks for sharing! Listen to Bristol Beat and you might hear yourself on the radio!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"Error: %@", error);
+        
+        HIDE_INDICATOR(YES);
+    }];
 }
 
 - (IBAction)doSample:(id)sender {
