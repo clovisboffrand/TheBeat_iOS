@@ -26,9 +26,7 @@
 
 #define HIDE_INDICATOR(animated)    [GET_INDICATOR hideWithAnimation:animated]
 
-#define TINT_DEF_COLR               @"f3731c"
-
-#define TINT_COLOR                 [UserDefault user].tintColor ? [UserDefault user].tintColor : TINT_DEF_COLR
+#define TINT_DEF_COLR               @"13016c"
 
 #define STREAM_URL                  @"http://ic2.christiannetcast.com/wqme-fm"
 
