@@ -250,7 +250,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
-                                        <color key="textColor" red="0.95294117647058818" green="0.45098039215686275" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.074509803921568626" green="0.0039215686274509803" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hourbg.png" id="481" userLabel="Image View">
@@ -262,7 +262,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
-                                        <color key="textColor" red="0.95294117647058818" green="0.45098039215686275" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.074509803921568626" green="0.0039215686274509803" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hourbg.png" id="480" userLabel="Image View">
@@ -274,19 +274,19 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
-                                        <color key="textColor" red="0.95294117647058818" green="0.45098039215686275" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.074509803921568626" green="0.0039215686274509803" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hourbg.png" id="483" userLabel="Image View">
                                         <rect key="frame" x="149" y="79" width="22" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="476" userLabel="Label">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="476" userLabel="Lblmin1">
                                         <rect key="frame" x="175" y="79" width="37" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
-                                        <color key="textColor" red="0.95294117647058818" green="0.45098039215686275" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.074509803921568626" green="0.0039215686274509803" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hourbg.png" id="478" userLabel="Image View">
@@ -298,7 +298,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
-                                        <color key="textColor" red="0.95294117647058818" green="0.45098039215686275" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.074509803921568626" green="0.0039215686274509803" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hourbg.png" id="482" userLabel="Image View">
@@ -326,7 +326,7 @@
                                         <rect key="frame" x="44" y="408" width="232" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <state key="normal" title="Set Alarm" backgroundImage="btn_yellow.png">
+                                        <state key="normal" title="Set Alarm" backgroundImage="btn_set_alarm.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -730,7 +730,7 @@
         <image name="arrow_left.png" width="15" height="20"/>
         <image name="arrow_right.png" width="15" height="20"/>
         <image name="bg_radio_page.png" width="1800" height="1800"/>
-        <image name="btn_yellow.png" width="552" height="88"/>
+        <image name="btn_set_alarm.png" width="552" height="88"/>
         <image name="call.png" width="64" height="64"/>
         <image name="email.png" width="64" height="64"/>
         <image name="facebook.png" width="64" height="64"/>
