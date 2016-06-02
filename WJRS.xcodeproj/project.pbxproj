@@ -265,7 +265,6 @@
 		4A05E4B41B5A30BF000E7305 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		4A05E4B51B5A30BF000E7305 /* ICTColorRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICTColorRandom.h; sourceTree = "<group>"; };
 		4A05E4B61B5A30BF000E7305 /* ICTColorRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICTColorRandom.m; sourceTree = "<group>"; };
-		4A05E4B71B5A30BF000E7305 /* Messages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messages.h; sourceTree = "<group>"; };
 		4A05E4B81B5A30BF000E7305 /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		4A05E4B91B5A30BF000E7305 /* UITypedefDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITypedefDefinition.h; sourceTree = "<group>"; };
 		4A05E4BA1B5A30BF000E7305 /* UserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefault.h; sourceTree = "<group>"; };
@@ -475,7 +474,6 @@
 				4A05E4B41B5A30BF000E7305 /* Header.h */,
 				4A05E4B51B5A30BF000E7305 /* ICTColorRandom.h */,
 				4A05E4B61B5A30BF000E7305 /* ICTColorRandom.m */,
-				4A05E4B71B5A30BF000E7305 /* Messages.h */,
 				4A05E4B81B5A30BF000E7305 /* Notifications.h */,
 				4A05E4B91B5A30BF000E7305 /* UITypedefDefinition.h */,
 				4A05E4BA1B5A30BF000E7305 /* UserDefault.h */,

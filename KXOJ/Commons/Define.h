@@ -14,32 +14,10 @@
 //#undef TARGET_OS_IPHONE
 //#endif
 
-#undef  NSLocalizedString
-
-#define NSLocalizedString(key, comment)  NSLocalizedStringCustom(key, comment)
-
 #define CLASS_VC NSStringFromClass([self class])
-
-#define kFB_APP_ID                  @"1447999118787441"
 
 #define kGoogle_Tracking_ID         @"UA-42428688-13"
 
-#define APP_NAME                    @"Bolsa Chica"
-
-#define DATE_FORMAT_LONG_SERVER     @"yyyy-MM-dd HH:mm:ss"
-
-#define DATE_FORMAT_SHORT_SERVER    @"yyyy-MM-dd"
-
-#define DATE_FORMAT_USE_SC          @"dd/MM/yyyy"
-
-#define DATE_FORMAT_FULL            @"dd MMM yyyy - hh:mm:ss a"
-
-#define iOS_8                       ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
-
-#define FORMAT_DATE_SERVER          DATE_FORMAT_LONG_SERVER
-
-
-//define for Progindicator
 #define GET_INDICATOR               (HTProgressHUD *)objc_getAssociatedObject(self, (__bridge const void *)([self class]))
 
 #define INIT_INDICATOR              objc_setAssociatedObject(self, (__bridge const void *)([self class]), [[HTProgressHUD alloc] init], OBJC_ASSOCIATION_RETAIN_NONATOMIC)

@@ -11,8 +11,7 @@
 
 @implementation UINavigationBar (Custom)
 
-- (void)custom
-{
+- (void)custom {
     [NavigationBarCustom customNavigationBar:self];
 }
 
@@ -20,13 +19,11 @@
 
 @implementation NavigationBarCustom
 
-- (void)awakeFromNib
-{
+- (void)awakeFromNib {
     [self custom];
 }
 
-+ (void)customNavigationBar:(UINavigationBar *)naviBar
-{
++ (void)customNavigationBar:(UINavigationBar *)naviBar {
     [naviBar setBarTintColor:UIColorWithHexCode(TINT_DEF_COLR, 1)];
     [naviBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:19],
                                       NSForegroundColorAttributeName:UIColorFromString(@"ffffff", 1)}];
