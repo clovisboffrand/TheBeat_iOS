@@ -25,6 +25,9 @@
 #define INSTAGRAM_URL   @"https://instagram.com/bristolbeatradio"
 #define PHONE_NUMBER    @"860-261-7456"
 #define EMAIL_ADDRESS   @"studio@bristolbeat.com"
+#define CALENDAR_URL    @"http://bristolbeat.com/event-directory/"
+#define ADVERTISERS_URL @"http://www.bristolbeat.com/directory"
+#define CONTESTS_URL    @"http://bristolbeat.com/category/contests/"
 
 @implementation SocialViewController
 
@@ -68,6 +71,18 @@
         case 4:
             viewController.title = @"Website";
             viewController.pageURL = WEBSITE_URL;
+            break;
+        case 5:
+            viewController.title = @"Calendar";
+            viewController.pageURL = CALENDAR_URL;
+            break;
+        case 6:
+            viewController.title = @"Advertisers";
+            viewController.pageURL = ADVERTISERS_URL;
+            break;
+        case 7:
+            viewController.title = @"Contests";
+            viewController.pageURL = CONTESTS_URL;
             break;
         case 8:
             viewController.title = @"Instagram";
