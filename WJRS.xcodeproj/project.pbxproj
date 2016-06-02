@@ -24,7 +24,6 @@
 		09AD14F51C8DE08F0089B204 /* SocialPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14F31C8DE08F0089B204 /* SocialPageViewController.m */; };
 		09AD14F61C8DE08F0089B204 /* SocialPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09AD14F41C8DE08F0089B204 /* SocialPageViewController.xib */; };
 		09AD14FA1C8DEE0F0089B204 /* ShoutOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14F91C8DEE0F0089B204 /* ShoutOutViewController.m */; };
-		09AD14FD1C8DEE7C0089B204 /* SlideObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14FC1C8DEE7C0089B204 /* SlideObj.m */; };
 		09AD15001C8DF89E0089B204 /* icon_shoutout.png in Resources */ = {isa = PBXBuildFile; fileRef = 09AD14FE1C8DF89E0089B204 /* icon_shoutout.png */; };
 		09AD15011C8DF89E0089B204 /* icon_shoutout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09AD14FF1C8DF89E0089B204 /* icon_shoutout@2x.png */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -168,8 +167,6 @@
 		09AD14F41C8DE08F0089B204 /* SocialPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialPageViewController.xib; sourceTree = "<group>"; };
 		09AD14F81C8DEE0F0089B204 /* ShoutOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutOutViewController.h; sourceTree = "<group>"; };
 		09AD14F91C8DEE0F0089B204 /* ShoutOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutOutViewController.m; sourceTree = "<group>"; };
-		09AD14FB1C8DEE7C0089B204 /* SlideObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideObj.h; sourceTree = "<group>"; };
-		09AD14FC1C8DEE7C0089B204 /* SlideObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideObj.m; sourceTree = "<group>"; };
 		09AD14FE1C8DF89E0089B204 /* icon_shoutout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_shoutout.png; sourceTree = "<group>"; };
 		09AD14FF1C8DF89E0089B204 /* icon_shoutout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_shoutout@2x.png"; sourceTree = "<group>"; };
 		1826E24381D955E0F9CCB98C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -386,8 +383,6 @@
 			children = (
 				09AD14F81C8DEE0F0089B204 /* ShoutOutViewController.h */,
 				09AD14F91C8DEE0F0089B204 /* ShoutOutViewController.m */,
-				09AD14FB1C8DEE7C0089B204 /* SlideObj.h */,
-				09AD14FC1C8DEE7C0089B204 /* SlideObj.m */,
 			);
 			name = ShoutOutModule;
 			sourceTree = "<group>";
@@ -906,7 +901,6 @@
 				4A05E4981B5A2865000E7305 /* MainViewController.m in Sources */,
 				09AD14E01C8DB7A00089B204 /* WebViewController.m in Sources */,
 				4A05E42D1B5A2865000E7305 /* CommonHelpers.m in Sources */,
-				09AD14FD1C8DEE7C0089B204 /* SlideObj.m in Sources */,
 				09AD14F51C8DE08F0089B204 /* SocialPageViewController.m in Sources */,
 				4A05E4DD1B5AC47B000E7305 /* NavigationBarCustom.m in Sources */,
 				C5DBF9241B6B7FCB00DA07C8 /* NSString+URLEncode.m in Sources */,

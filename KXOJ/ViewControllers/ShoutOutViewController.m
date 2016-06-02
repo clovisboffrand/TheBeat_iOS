@@ -10,11 +10,6 @@
 
 #import "ShoutOutViewController.h"
 #import "Header.h"
-#import "SlideObj.h"
-
-@interface ShoutOutViewController()
-
-@end
 
 #define SAMPLE_LINK     @"http://www.radioserversapps.com/wqme/shoutout.mp3"
 #define IMAGE_URL       @"http://radioserversapps.com/wqme/shoutout.png"
@@ -49,24 +44,15 @@
     });
 }
 
-- (void)viewDidDisappear:(BOOL)animated
-{
+- (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     [[NSNotificationCenter defaultCenter]postNotificationName:@"playRadio" object:nil];
-    
 }
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
     return YES;
-}
-
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc. that aren't in use.
 }
 
 #pragma mark - Method
@@ -106,12 +92,6 @@
     int pageWidth = self.scrSlide.frame.size.width;
     int offset=self.scrSlide.contentOffset.x/pageWidth;
     [self.scrSlide setContentOffset:CGPointMake(offset*pageWidth, 0)];
-}
-
-- (IBAction)tapButton:(id)sender {
-    UIButton *btn = (UIButton*)sender;
-    SlideObj *obj = self.arrSlide[btn.tag];
-    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:obj.slideLinkURL]];
 }
 
 - (void)startRecording {

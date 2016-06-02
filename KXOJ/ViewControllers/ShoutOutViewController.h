@@ -9,7 +9,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface ShoutOutViewController : UIViewController<UIScrollViewDelegate,AVAudioPlayerDelegate,AVAudioRecorderDelegate,UIWebViewDelegate> {
+@interface ShoutOutViewController : UIViewController<UIScrollViewDelegate,AVAudioPlayerDelegate,AVAudioRecorderDelegate,UIWebViewDelegate>
+{
     IBOutlet UIActivityIndicatorView *activityIndicator;
     AVAudioRecorder *audioRecorder;
     int recordEncoding;
@@ -26,25 +27,25 @@
     } encodingTypes;
     AVAudioPlayer *theAudio;
 }
-@property(nonatomic,weak)IBOutlet UIWebView *webview;
-@property(nonatomic,weak)IBOutlet UIView *slideview;
-@property(nonatomic,weak)IBOutlet UIScrollView *scrSlide;
-@property(nonatomic,strong)NSMutableArray *arrSlide;
-@property(nonatomic,weak)IBOutlet UIButton *btRecord;
-@property(nonatomic,weak)IBOutlet UIButton *btnPreview;
-@property(nonatomic,weak)IBOutlet UIButton *btnSample;
-@property(nonatomic,weak)IBOutlet UIButton *btnSend;
 
-@property(nonatomic,strong)IBOutlet UINavigationBar *nav;
+@property(nonatomic, strong) IBOutlet UIWebView *webview;
+@property(nonatomic, strong) IBOutlet UIView *slideview;
+@property(nonatomic, strong) IBOutlet UIScrollView *scrSlide;
+@property(nonatomic, strong) NSMutableArray *arrSlide;
+@property(nonatomic, strong) IBOutlet UIButton *btRecord;
+@property(nonatomic, strong) IBOutlet UIButton *btnPreview;
+@property(nonatomic, strong) IBOutlet UIButton *btnSample;
+@property(nonatomic, strong) IBOutlet UIButton *btnSend;
+@property(nonatomic, strong) IBOutlet UINavigationBar *nav;
 
--(IBAction)goBack:(id)sender;
--(IBAction)goNext:(id)sender;
--(IBAction)doReload:(id)sender;
--(IBAction)doRecord:(id)sender;
--(IBAction)doPreview:(id)sender;
--(IBAction)doSend:(id)sender;
--(IBAction)doSample:(id)sender;
--(void) startRecording;
--(void) stopRecording;
+- (IBAction)goBack:(id)sender;
+- (IBAction)goNext:(id)sender;
+- (IBAction)doReload:(id)sender;
+- (IBAction)doRecord:(id)sender;
+- (IBAction)doPreview:(id)sender;
+- (IBAction)doSend:(id)sender;
+- (IBAction)doSample:(id)sender;
+- (void)startRecording;
+- (void)stopRecording;
 
 @end
