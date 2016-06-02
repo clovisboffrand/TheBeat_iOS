@@ -11,8 +11,6 @@
 #import <GoogleAnalytics/GAI.h>
 #import <GoogleAnalytics/GAITracker.h>
 #import <GoogleAnalytics/GAIFields.h>
-#import "XMLConverter.h"
-#import "XMLDictionary.h"
 
 @class AFHTTPRequestOperation;
 
