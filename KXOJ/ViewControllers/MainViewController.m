@@ -35,36 +35,15 @@
     // (i.e. when user backgrounds app, double-taps home,
     // then swipes right to reveal multimedia control buttons).
     // See MyWindow.h for more info.
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(playbutton)
-                                                 name:@"TogglePlayPause"
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(reOpenApp)
-                                                 name:@"reOpenApp"
-                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbutton) name:@"TogglePlayPause" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reOpenApp) name:@"reOpenApp" object:nil];
     
     // Add notification methods
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(didSetAlarm)
-                                                 name:@"setAlarm"
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(didWakeup)
-                                                 name:@"didWakeup"
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(updateStream)
-                                                 name:@"updateStream"
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(playRadio)
-                                                 name:@"playRadio"
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(pauseRadio)
-                                                 name:@"pauseRadio"
-                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didSetAlarm) name:@"setAlarm" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didWakeup) name:@"didWakeup" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateStream) name:@"updateStream" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playRadio) name:@"playRadio" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pauseRadio) name:@"pauseRadio" object:nil];
     
     [self updatebuttonstatus];
     

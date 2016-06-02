@@ -11,7 +11,8 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "Header.h"
 
-@interface MainViewController : UIViewController <UIWebViewDelegate, AVAudioSessionDelegate, NSXMLParserDelegate> {
+@interface MainViewController : UIViewController <UIWebViewDelegate, AVAudioSessionDelegate, NSXMLParserDelegate>
+{
     IBOutlet UIView *volumeSlider;
     IBOutlet UIButton *playpausebutton;
 }
