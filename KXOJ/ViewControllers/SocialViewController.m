@@ -12,19 +12,19 @@
 #import <MessageUI/MessageUI.h>
 #import "header.h"
 
-@interface SocialViewController () <UIWebViewDelegate, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate> {
+@interface SocialViewController () <UIWebViewDelegate, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate>
+{
     IBOutlet UIWebView *adWebView;
 }
 
 @end
 
-#define FACEBOOK_URL    @"https://www.facebook.com/987wqme/"
-#define TWITTER_URL     @"https://twitter.com/987_The_Song"
-#define YOUTUBE_URL     @"https://www.youtube.com/channel/UCf8-RSsik5Yantq93bN-vTQ"
-#define WEBSITE_URL     @"http://www.987thesong.com"
-#define INSTAGRAM_URL   @"https://www.instagram.com/987_the_song/"
-#define PHONE_NUMBER    @"1-844-484-7664"
-#define EMAIL_ADDRESS   @"kwallace@wqme.com"
+#define FACEBOOK_URL    @"http://www.facebook.com/bristolbeat"
+#define TWITTER_URL     @"http://www.twitter.com/bristolsrockmix"
+#define WEBSITE_URL     @"http://bristolbeat.com/"
+#define INSTAGRAM_URL   @"https://instagram.com/bristolbeatradio"
+#define PHONE_NUMBER    @"860-261-7456"
+#define EMAIL_ADDRESS   @"studio@bristolbeat.com"
 
 @implementation SocialViewController
 
@@ -64,10 +64,6 @@
         case 2:
             viewController.title = @"Twitter";
             viewController.pageURL = TWITTER_URL;
-            break;
-        case 3:
-            viewController.title = @"Youtube";
-            viewController.pageURL = YOUTUBE_URL;
             break;
         case 4:
             viewController.title = @"Website";
