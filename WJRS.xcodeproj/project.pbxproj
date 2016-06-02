@@ -252,9 +252,7 @@
 		BE652A3418A8802300B81C4A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C5DBF9251B6B919500DA07C8 /* instagramicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instagramicon.png; sourceTree = "<group>"; };
 		C5DBF9261B6B919500DA07C8 /* vineicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vineicon.png; sourceTree = "<group>"; };
-		CBA0D0AF173E5A2F0073E073 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		CBE2F725171274C900FC41C1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		CBE2F727171274D600FC41C1 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		CBE2F729171281F700FC41C1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CBE2F72B1712820C00FC41C1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CEC48A1F94B40D6885BDA3F2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -384,10 +382,8 @@
 			children = (
 				BE652A3418A8802300B81C4A /* MobileCoreServices.framework */,
 				BE652A3218A8801800B81C4A /* AddressBook.framework */,
-				CBA0D0AF173E5A2F0073E073 /* iAd.framework */,
 				CBE2F72B1712820C00FC41C1 /* SystemConfiguration.framework */,
 				CBE2F729171281F700FC41C1 /* MessageUI.framework */,
-				CBE2F727171274D600FC41C1 /* AdSupport.framework */,
 				CBE2F725171274C900FC41C1 /* StoreKit.framework */,
 				B5EFBE4213B8A44F00BEAFD9 /* CFNetwork.framework */,
 				B54C4D691395977900995852 /* MediaPlayer.framework */,
