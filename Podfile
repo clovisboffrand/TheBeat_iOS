@@ -1,0 +1,6 @@
+pod 'AFNetworking'
+pod 'HTProgressHUD'
+pod 'SDWebImage'
+pod 'SWTableViewCell'
+pod 'ICTKit', '~>1.0.1'
+pod 'GoogleAnalytics'

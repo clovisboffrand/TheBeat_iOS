@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIApplication">
+            <connections>
+                <outlet property="delegate" destination="3" id="99"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <customObject id="3" customClass="Radio99AppDelegate">
+            <connections>
+                <outlet property="tabBarController" destination="106" id="nUL-d4-q7u"/>
+                <outlet property="window" destination="2" id="yvp-9a-yTa"/>
+            </connections>
+        </customObject>
+        <window opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2" customClass="MyWindow">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        </window>
+        <tabBarController id="106">
+            <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" selectedItem="J09-kr-2wp" id="107">
+                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            </tabBar>
+            <viewControllers>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="Itz-Gy-INF" userLabel="Radio">
+                    <tabBarItem key="tabBarItem" title="Radio" image="icon_radio.png" id="pWh-35-63F"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VXh-TH-VGG" customClass="NavigationBarCustom">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.078431372550000003" green="0.1764705882" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <viewControllers>
+                        <viewController id="108" customClass="MainViewController">
+                            <view key="view" contentMode="scaleToFill" id="125">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_radio_page.png" id="LrX-cs-Jrh">
+                                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="237">
+                                        <rect key="frame" x="0.0" y="411" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <items>
+                                            <barButtonItem style="plain" systemItem="fixedSpace" id="Skq-fU-9yJ"/>
+                                            <barButtonItem style="plain" id="499">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="406">
+                                                    <rect key="frame" x="16" y="3" width="38" height="38"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                                    <state key="normal" image="play.png">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="playbutton" destination="108" eventType="touchUpInside" id="407"/>
+                                                    </connections>
+                                                </button>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="fixedSpace" id="AgM-Dg-fu9"/>
+                                            <barButtonItem style="plain" id="509">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="508">
+                                                    <rect key="frame" x="64" y="3" width="38" height="38"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                                    <state key="normal" image="Stop.png">
+                                                        <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="stopTapped:" destination="108" eventType="touchUpInside" id="511"/>
+                                                    </connections>
+                                                </button>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="fixedSpace" id="eQm-sm-dua"/>
+                                            <barButtonItem style="plain" id="510">
+                                                <view key="customView" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="405">
+                                                    <rect key="frame" x="112" y="12" width="149" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="uWr-I7-36x"/>
+                                            <barButtonItem style="plain" id="GWa-b9-Lpr">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MXQ-dI-UVz">
+                                                    <rect key="frame" x="269" y="5" width="35" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                                    <state key="normal" image="icn_chanel.png">
+                                                        <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="fixedSpace" id="2ds-x3-xEJ"/>
+                                        </items>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </toolbar>
+                                    <webView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="svn-0E-d2G">
+                                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="108" id="6wO-Vl-uVY"/>
+                                        </connections>
+                                    </webView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logo_footer.png" id="0fo-4X-Az3">
+                                        <rect key="frame" x="0.0" y="275" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Community Outreach of Anderson University" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rXn-U6-7LM">
+                                        <rect key="frame" x="50" y="383" width="220" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <extendedEdge key="edgesForExtendedLayout"/>
+                            <navigationItem key="navigationItem" title="Radio" id="jfk-pz-PL3"/>
+                            <connections>
+                                <outlet property="_adWebView" destination="svn-0E-d2G" id="wR6-dp-vVQ"/>
+                                <outlet property="playpausebutton" destination="406" id="410"/>
+                                <outlet property="volumeSlider" destination="405" id="409"/>
+                            </connections>
+                        </viewController>
+                    </viewControllers>
+                </navigationController>
+                <navigationController definesPresentationContext="YES" id="374">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Web" image="icon_web.png" id="378"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="375" customClass="NavigationBarCustom">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.078431372550000003" green="0.1764705882" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <viewControllers>
+                        <viewController id="376" customClass="WebViewController">
+                            <view key="view" contentMode="scaleToFill" id="391">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new-app-background.jpg" id="dpE-20-qZr">
+                                        <rect key="frame" x="0.0" y="-46" width="320" height="548"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <webView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="Nad-qh-wg9">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </webView>
+                                    <webView contentMode="scaleToFill" id="hY2-os-xUX">
+                                        <rect key="frame" x="0.0" y="50" width="320" height="361"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="376" id="nQK-YB-XBo"/>
+                                        </connections>
+                                    </webView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="loI-ep-IG6">
+                                        <rect key="frame" x="141" y="209" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="color" red="0.95294117647058818" green="0.45098039215686275" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="rbK-XB-bew">
+                                        <rect key="frame" x="0.0" y="411" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <items>
+                                            <barButtonItem image="arrow_right.png" style="plain" id="vaB-oM-4cl">
+                                                <connections>
+                                                    <action selector="didTapGoBack:" destination="376" id="HdQ-cp-8Py"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="lb0-0W-lL5"/>
+                                            <barButtonItem image="reload_new.png" style="plain" id="xFg-Pr-prd">
+                                                <connections>
+                                                    <action selector="didTapReload:" destination="376" id="AZg-x5-0xW"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="3Zp-VV-UMU"/>
+                                            <barButtonItem image="arrow_left.png" style="plain" id="kPg-sq-hpH">
+                                                <connections>
+                                                    <action selector="didTapGoForward:" destination="376" id="UZ0-dW-hmT"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </toolbar>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <extendedEdge key="edgesForExtendedLayout"/>
+                            <navigationItem key="navigationItem" title="Web" id="377"/>
+                            <connections>
+                                <outlet property="adWebView" destination="Nad-qh-wg9" id="lWJ-LA-de1"/>
+                                <outlet property="progress" destination="loI-ep-IG6" id="tie-Zo-lE2"/>
+                                <outlet property="webView" destination="hY2-os-xUX" id="yUb-C6-TVX"/>
+                            </connections>
+                        </viewController>
+                    </viewControllers>
+                </navigationController>
+                <navigationController id="hnf-go-vqt" userLabel="Alarm">
+                    <tabBarItem key="tabBarItem" title="Alarm" image="alarm.png" id="J09-kr-2wp"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qnU-zt-1gI" customClass="NavigationBarCustom">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.078431372550000003" green="0.1764705882" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <viewControllers>
+                        <viewController id="155" customClass="AlarmViewController">
+                            <view key="view" contentMode="scaleToFill" id="467">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new-app-background.jpg" id="IHp-7B-OtV">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Current Time" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="472">
+                                        <rect key="frame" x="16" y="25" width="278" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Set Wake Up Time" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="471">
+                                        <rect key="frame" x="70" y="135" width="180" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="473">
+                                        <rect key="frame" x="70" y="79" width="37" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
+                                        <color key="textColor" red="0.95294117647058818" green="0.45098039215686275" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hourbg.png" id="481" userLabel="Image View">
+                                        <rect key="frame" x="70" y="79" width="37" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="477">
+                                        <rect key="frame" x="108" y="79" width="37" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
+                                        <color key="textColor" red="0.95294117647058818" green="0.45098039215686275" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hourbg.png" id="480" userLabel="Image View">
+                                        <rect key="frame" x="108" y="79" width="37" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=":" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="479">
+                                        <rect key="frame" x="149" y="79" width="22" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
+                                        <color key="textColor" red="0.95294117647058818" green="0.45098039215686275" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hourbg.png" id="483" userLabel="Image View">
+                                        <rect key="frame" x="149" y="79" width="22" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="476" userLabel="Label">
+                                        <rect key="frame" x="175" y="79" width="37" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
+                                        <color key="textColor" red="0.95294117647058818" green="0.45098039215686275" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hourbg.png" id="478" userLabel="Image View">
+                                        <rect key="frame" x="175" y="79" width="37" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="475">
+                                        <rect key="frame" x="213" y="79" width="37" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
+                                        <color key="textColor" red="0.95294117647058818" green="0.45098039215686275" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hourbg.png" id="482" userLabel="Image View">
+                                        <rect key="frame" x="213" y="79" width="37" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <pickerView contentMode="scaleToFill" id="470">
+                                        <rect key="frame" x="11" y="175" width="289" height="162"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="155" id="485"/>
+                                            <outlet property="delegate" destination="155" id="486"/>
+                                        </connections>
+                                    </pickerView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="center" id="469">
+                                        <rect key="frame" x="4" y="331" width="313" height="69"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <string key="text">After setting the time on this screen, change the volume as desired then press the set alarm button. You must leave the app open for the alarm to work.</string>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="468">
+                                        <rect key="frame" x="44" y="408" width="232" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <state key="normal" title="Set Alarm" backgroundImage="btn_yellow.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleBtn:" destination="155" eventType="touchUpInside" id="495"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <extendedEdge key="edgesForExtendedLayout"/>
+                            <navigationItem key="navigationItem" title="Wake Up to 98.7, The Song" id="Aka-DB-HDx"/>
+                            <connections>
+                                <outlet property="btnSet" destination="468" id="487"/>
+                                <outlet property="datePicker" destination="470" id="VwN-8k-WK5"/>
+                                <outlet property="lblMid" destination="479" id="eG7-0c-v3f"/>
+                                <outlet property="lblhour1" destination="473" id="EQH-VD-WJL"/>
+                                <outlet property="lblhour2" destination="477" id="490"/>
+                                <outlet property="lblmin1" destination="476" id="ChO-uP-Tc0"/>
+                                <outlet property="lblmin2" destination="475" id="492"/>
+                            </connections>
+                        </viewController>
+                    </viewControllers>
+                </navigationController>
+                <navigationController definesPresentationContext="YES" id="HYC-6T-P9t" userLabel="Social">
+                    <tabBarItem key="tabBarItem" title="Social" image="icon_social.png" id="mOS-Po-h3u" userLabel="Social"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="I5A-rZ-h3U" customClass="NavigationBarCustom">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.078431372549019607" green="0.1764705882352941" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <viewControllers>
+                        <viewController id="250" userLabel="Social" customClass="SocialViewController">
+                            <view key="view" contentMode="scaleToFill" id="OSc-9z-hpN">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new-app-background.jpg" id="Vpk-Yj-jya">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <webView contentMode="scaleToFill" id="Ro6-et-X5w">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="250" id="zJ0-oD-c07"/>
+                                        </connections>
+                                    </webView>
+                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vJm-na-2mz" userLabel="FB">
+                                        <rect key="frame" x="2" y="63" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="facebook.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapSocialButton:" destination="250" eventType="touchUpInside" id="deu-ac-A6G"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NZ6-tw-8WO">
+                                        <rect key="frame" x="6" y="133" width="69" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pWg-8o-xAp" userLabel="TW">
+                                        <rect key="frame" x="81" y="63" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="twitter.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapSocialButton:" destination="250" eventType="touchUpInside" id="vjd-aZ-d9m"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="twitter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gjh-I8-IWe">
+                                        <rect key="frame" x="85" y="133" width="69" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="99P-H4-bUi" userLabel="youtube">
+                                        <rect key="frame" x="242" y="168" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="youtube.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapSocialButton:" destination="250" eventType="touchUpInside" id="hjA-ol-SYY"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="youtube" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Knj-Iy-KhW">
+                                        <rect key="frame" x="246" y="238" width="69" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oyu-Yw-8Qx" userLabel="Website">
+                                        <rect key="frame" x="166" y="63" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="website.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapSocialButton:" destination="250" eventType="touchUpInside" id="Nd2-oV-Z3Q"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="website" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5xS-iu-Dqo">
+                                        <rect key="frame" x="170" y="133" width="69" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QBY-1s-YtE" userLabel="Phone">
+                                        <rect key="frame" x="242" y="63" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="call.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapOtherButton:" destination="250" eventType="touchUpInside" id="pB3-oe-cou"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TNq-Qq-JX4">
+                                        <rect key="frame" x="246" y="132" width="69" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1hk-ts-OYe" userLabel="Message">
+                                        <rect key="frame" x="2" y="169" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="sms.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapOtherButton:" destination="250" eventType="touchUpInside" id="ln7-CT-m3f"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S1A-PN-p8i">
+                                        <rect key="frame" x="6" y="238" width="69" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CrP-MC-eC0" userLabel="instagram">
+                                        <rect key="frame" x="166" y="169" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="instagramicon.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapSocialButton:" destination="250" eventType="touchUpInside" id="QN7-fF-u6g"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="epM-X4-set">
+                                        <rect key="frame" x="169" y="238" width="69" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d3e-J5-b2o" userLabel="email">
+                                        <rect key="frame" x="81" y="169" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="email.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapOtherButton:" destination="250" eventType="touchUpInside" id="RR6-dg-1we"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rP5-Bg-asY">
+                                        <rect key="frame" x="85" y="238" width="69" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <extendedEdge key="edgesForExtendedLayout"/>
+                            <navigationItem key="navigationItem" title="Social" id="Dyh-Mq-tD5" userLabel="Social"/>
+                            <connections>
+                                <outlet property="adWebView" destination="Ro6-et-X5w" id="Lfq-7j-dHz"/>
+                            </connections>
+                        </viewController>
+                    </viewControllers>
+                </navigationController>
+                <navigationController definesPresentationContext="YES" id="513" userLabel="ShoutOut">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Shout Out" image="icon_shoutout.png" id="517" userLabel="ShoutOut"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="514" customClass="NavigationBarCustom">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.078431372550000003" green="0.1764705882" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <viewControllers>
+                        <viewController id="515" userLabel="ShoutOut" customClass="ShoutOutViewController">
+                            <view key="view" contentMode="scaleToFill" id="F01-je-rVn">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new-app-background.jpg" id="fOM-Yf-1QC">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" id="ehY-k3-HRz">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="210"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="bU6-tH-tI3">
+                                                <rect key="frame" x="0.0" y="146" width="320" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                <items>
+                                                    <barButtonItem image="arrow_right.png" style="plain" id="nqc-1X-xwY">
+                                                        <connections>
+                                                            <action selector="goBack:" destination="515" id="ZC4-Zw-wmf"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MQt-KO-wy0"/>
+                                                    <barButtonItem image="reload_new.png" style="plain" id="e6z-dK-jmI">
+                                                        <connections>
+                                                            <action selector="doReload:" destination="515" id="QVF-jf-is3"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0B1-ee-wmI"/>
+                                                    <barButtonItem image="arrow_left.png" style="plain" id="6V4-BU-b7x">
+                                                        <connections>
+                                                            <action selector="goNext:" destination="515" id="2hT-78-Anx"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                </items>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            </toolbar>
+                                            <webView opaque="NO" contentMode="scaleToFill" scalesPageToFit="YES" id="gTl-Vu-Z0k">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="210"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="515" id="4IZ-GJ-dSc"/>
+                                                </connections>
+                                            </webView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" id="gt5-Vk-018">
+                                        <rect key="frame" x="0.0" y="143" width="320" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <subviews>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="jEI-sb-9bL">
+                                                <rect key="frame" x="0.0" y="2" width="320" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                            </scrollView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xMa-nB-OD5">
+                                        <rect key="frame" x="12" y="222" width="298" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" image="samplebutton.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doSample:" destination="515" eventType="touchUpInside" id="xLF-gN-2mv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3tg-jp-m7w">
+                                        <rect key="frame" x="12" y="277" width="298" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" image="recordbutton.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doRecord:" destination="515" eventType="touchUpInside" id="5bF-mf-JAi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="duW-17-oSH">
+                                        <rect key="frame" x="12" y="332" width="298" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" image="listenbutton.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doPreview:" destination="515" eventType="touchUpInside" id="EXN-Vv-1CP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rvq-r8-iFp">
+                                        <rect key="frame" x="12" y="387" width="298" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" image="sendbutton.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doSend:" destination="515" eventType="touchUpInside" id="3Ye-Ar-bLh"/>
+                                        </connections>
+                                    </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="F55-eg-qFr">
+                                        <rect key="frame" x="142" y="85" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" red="0.95294117649999999" green="0.45098039220000002" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <extendedEdge key="edgesForExtendedLayout"/>
+                            <navigationItem key="navigationItem" title="Shout Out" id="516"/>
+                            <connections>
+                                <outlet property="activityIndicator" destination="F55-eg-qFr" id="E3D-z3-TbK"/>
+                                <outlet property="btRecord" destination="3tg-jp-m7w" id="X10-Hw-ehn"/>
+                                <outlet property="btnPreview" destination="duW-17-oSH" id="FFL-fj-1wy"/>
+                                <outlet property="btnSample" destination="xMa-nB-OD5" id="1Zh-wX-cOL"/>
+                                <outlet property="btnSend" destination="Rvq-r8-iFp" id="7gk-Qa-5TI"/>
+                                <outlet property="scrSlide" destination="jEI-sb-9bL" id="dtd-cL-pFj"/>
+                                <outlet property="webview" destination="gTl-Vu-Z0k" id="9nF-RS-UJ7"/>
+                            </connections>
+                        </viewController>
+                    </viewControllers>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="65f-Jl-Xkf">
+                        <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                </navigationController>
+            </viewControllers>
+        </tabBarController>
+    </objects>
+    <resources>
+        <image name="Stop.png" width="26" height="26"/>
+        <image name="alarm.png" width="30" height="30"/>
+        <image name="arrow_left.png" width="15" height="20"/>
+        <image name="arrow_right.png" width="15" height="20"/>
+        <image name="bg_radio_page.png" width="640" height="1136"/>
+        <image name="btn_yellow.png" width="552" height="88"/>
+        <image name="call.png" width="64" height="64"/>
+        <image name="email.png" width="64" height="64"/>
+        <image name="facebook.png" width="64" height="64"/>
+        <image name="hourbg.png" width="78" height="98"/>
+        <image name="icn_chanel.png" width="35" height="35"/>
+        <image name="icon_radio.png" width="30" height="30"/>
+        <image name="icon_shoutout.png" width="30" height="30"/>
+        <image name="icon_social.png" width="30" height="30"/>
+        <image name="icon_web.png" width="30" height="30"/>
+        <image name="img_logo_footer.png" width="640" height="239"/>
+        <image name="instagramicon.png" width="64" height="64"/>
+        <image name="listenbutton.png" width="298" height="41"/>
+        <image name="new-app-background.jpg" width="640" height="960"/>
+        <image name="play.png" width="26" height="26"/>
+        <image name="recordbutton.png" width="298" height="41"/>
+        <image name="reload_new.png" width="25" height="25"/>
+        <image name="samplebutton.png" width="298" height="41"/>
+        <image name="sendbutton.png" width="298" height="41"/>
+        <image name="sms.png" width="64" height="64"/>
+        <image name="twitter.png" width="64" height="64"/>
+        <image name="website.png" width="64" height="64"/>
+        <image name="youtube.png" width="64" height="64"/>
+    </resources>
+</document>
