@@ -712,6 +712,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = RadioServersLLC;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WJRS" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -954,7 +955,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.RadioserversLLC.wqme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RadioserversLLC.thebeat;
 				PRODUCT_NAME = WJRS;
 				PROVISIONING_PROFILE = "a300cb30-4343-4ffd-a924-bd9648a1635a";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "a300cb30-4343-4ffd-a924-bd9648a1635a";
@@ -997,7 +998,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.RadioserversLLC.wqme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RadioserversLLC.thebeat;
 				PRODUCT_NAME = WJRS;
 				PROVISIONING_PROFILE = "49b446bc-7004-4dcb-a902-17aef735dc33";
 				"PROVISIONING_PROFILE[sdk=*]" = "49b446bc-7004-4dcb-a902-17aef735dc33";

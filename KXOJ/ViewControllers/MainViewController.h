@@ -19,6 +19,5 @@
 
 @property (nonatomic, strong) AVPlayer *radiosound;
 @property (nonatomic, strong) UIButton *playpausebutton;
-@property (nonatomic, strong) NSTimer *timer;
 
 @end

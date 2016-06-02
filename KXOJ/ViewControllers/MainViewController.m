@@ -29,7 +29,7 @@
     
     [super viewDidLoad];
     
-    [self reloadRadioStreaming:nil];
+    [self reloadRadioStreaming];
     
     // Register self for remote notifications of play/pause toggle
     // (i.e. when user backgrounds app, double-taps home,
@@ -50,14 +50,12 @@
     [self addBanner];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
+- (void)viewDidAppear:(BOOL)animated {
     GoogleTrackingBlock(self, CLASS_VC);
     [super viewDidAppear:animated];
 }
 
-- (void)addBanner
-{
+- (void)addBanner {
     [_adWebView loadHTMLString:[CommonHelpers HTMLBodyOfBannerView] baseURL:nil];
 }
 
@@ -71,66 +69,47 @@
     return YES;
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)playRadio
-{
+- (void)playRadio {
     if ([self.playpausebutton.imageView.image isEqual:[UIImage imageNamed:@"play.png"]]) {
         [self playCurrentTrack];
     }
 }
 
-- (void)pauseRadio
-{
+- (void)pauseRadio {
     [self pauseCurrentTrack];
 }
 
-- (void)reOpenApp
-{
+- (void)reOpenApp {
     if ([self.radiosound rate] == 0.0) {
         [self playCurrentTrack];
     }
 }
 
 - (void)buffering {
+    
 }
 
-- (void)didSetAlarm
-{
+- (void)didSetAlarm {
     [self pauseCurrentTrack];
 }
 
-- (void)updateStream
-{
+- (void)updateStream {
     if (radiosound.rate == 1.0) {
         [self pauseCurrentTrack];
-    }
-    else {
+    } else {
         [self playCurrentTrack];
     }
 }
 
-- (void)didWakeup
-{
+- (void)didWakeup {
     [self playCurrentTrack];
 }
 
-- (void)updatebuttonstatus
-{
+- (void)updatebuttonstatus {
     if (radiosound.rate == 1.0) {
-        [self.playpausebutton setImage:[UIImage imageNamed:@"pause.png"]
-                              forState:UIControlStateNormal];
+        [self.playpausebutton setImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
     } else {
-        [self.playpausebutton setImage:[UIImage imageNamed:@"play.png"]
-                              forState:UIControlStateNormal];
+        [self.playpausebutton setImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
     }
 }
 
@@ -142,54 +121,26 @@
     }
 }
 
-- (void)playCurrentTrack
-{
+- (void)playCurrentTrack {
     [self.radiosound play];
     
     // Update image states to reflect "Pause" option
-    [self.playpausebutton setImage:[UIImage imageNamed:@"pause"]
-                          forState:UIControlStateNormal];
+    [self.playpausebutton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
 }
 
-- (IBAction)stopTapped:(id)sender
-{
+- (IBAction)stopTapped:(id)sender {
     [self pauseCurrentTrack];
 }
 
-- (void)pauseCurrentTrack
-{
+- (void)pauseCurrentTrack {
     [self.radiosound pause];
     
     // Update image states to reflect "Play" option
-    [self.playpausebutton setImage:[UIImage imageNamed:@"play"]
-                          forState:UIControlStateNormal];
-}
-
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    
-    // Return YES for supported orientations
-    return YES;
-}
-
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
-- (void)viewDidUnload {
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (void)dealloc {
+    [self.playpausebutton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
 }
 
 #pragma mark - Notification Stream Radio
-- (void)reloadRadioStreaming:(NSNotification *)notification
-{
+- (void)reloadRadioStreaming {
     /* Pick any one of them */
     // 1. Overriding the output audio route
     //UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
@@ -226,8 +177,7 @@
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
 }
 
-- (void)interruption:(NSNotification*)notification
-{
+- (void)interruption:(NSNotification*)notification {
     NSDictionary *interuptionDict = notification.userInfo;
     NSUInteger interuptionType = (NSUInteger)[interuptionDict valueForKey:AVAudioSessionInterruptionTypeKey];
     
