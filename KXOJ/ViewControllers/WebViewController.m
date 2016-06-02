@@ -9,7 +9,8 @@
 #import "WebViewController.h"
 #import "Header.h"
 
-@interface WebViewController () <UIWebViewDelegate> {
+@interface WebViewController () <UIWebViewDelegate>
+{
     IBOutlet UIWebView *adWebView;
     IBOutlet UIWebView *webView;
     IBOutlet UIActivityIndicatorView *progress;
@@ -17,7 +18,7 @@
 
 @end
 
-#define WEB_URL @"http://www.987thesong.com"
+#define WEB_URL @"http://bristolbeat.com/category/events/"
 
 @implementation WebViewController
 

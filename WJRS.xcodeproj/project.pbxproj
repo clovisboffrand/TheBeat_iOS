@@ -277,13 +277,13 @@
 			name = MainModule;
 			sourceTree = "<group>";
 		};
-		09AD14E51C8DC9EF0089B204 /* WebModule */ = {
+		09AD14E51C8DC9EF0089B204 /* EventsModule */ = {
 			isa = PBXGroup;
 			children = (
 				09AD14DE1C8DB7A00089B204 /* WebViewController.h */,
 				09AD14DF1C8DB7A00089B204 /* WebViewController.m */,
 			);
-			name = WebModule;
+			name = EventsModule;
 			sourceTree = "<group>";
 		};
 		09AD14E61C8DCA000089B204 /* AlarmModule */ = {
@@ -521,7 +521,7 @@
 			isa = PBXGroup;
 			children = (
 				09AD14E41C8DC9E20089B204 /* MainModule */,
-				09AD14E51C8DC9EF0089B204 /* WebModule */,
+				09AD14E51C8DC9EF0089B204 /* EventsModule */,
 				09AD14E61C8DCA000089B204 /* AlarmModule */,
 				09AD14EE1C8DCFC70089B204 /* SocialModule */,
 				09AD14F71C8DEC890089B204 /* ShoutOutModule */,

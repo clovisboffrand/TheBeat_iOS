@@ -27,7 +27,7 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
             <nil key="simulatedBottomBarMetrics"/>
-            <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" selectedItem="mOS-Po-h3u" id="107">
+            <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" selectedItem="378" id="107">
                 <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -144,13 +144,13 @@
                 </navigationController>
                 <navigationController definesPresentationContext="YES" id="374">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Web" image="icon_web.png" id="378"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="icon_web.png" id="378"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="375" customClass="NavigationBarCustom">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.078431372550000003" green="0.1764705882" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <viewControllers>
-                        <viewController id="376" customClass="WebViewController">
+                        <viewController id="376" userLabel="Events" customClass="WebViewController">
                             <view key="view" contentMode="scaleToFill" id="391">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,7 +205,7 @@
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <extendedEdge key="edgesForExtendedLayout"/>
-                            <navigationItem key="navigationItem" title="Web" id="377"/>
+                            <navigationItem key="navigationItem" title="Events" id="377"/>
                             <connections>
                                 <outlet property="adWebView" destination="Nad-qh-wg9" id="lWJ-LA-de1"/>
                                 <outlet property="progress" destination="loI-ep-IG6" id="tie-Zo-lE2"/>
