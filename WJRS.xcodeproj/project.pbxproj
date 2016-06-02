@@ -108,7 +108,6 @@
 		4A05E48E1B5A2865000E7305 /* new-app-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E4001B5A2865000E7305 /* new-app-background.jpg */; };
 		4A05E4981B5A2865000E7305 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4121B5A2865000E7305 /* MainViewController.m */; };
 		4A05E4AA1B5A290A000E7305 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4A91B5A290A000E7305 /* main.m */; };
-		4A05E4AC1B5A2923000E7305 /* WJRS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E4AB1B5A2923000E7305 /* WJRS-Info.plist */; };
 		4A05E4BD1B5A30BF000E7305 /* GAITrackingMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4B31B5A30BF000E7305 /* GAITrackingMethod.m */; };
 		4A05E4BE1B5A30BF000E7305 /* ICTColorRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4B61B5A30BF000E7305 /* ICTColorRandom.m */; };
 		4A05E4BF1B5A30BF000E7305 /* UserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4BB1B5A30BF000E7305 /* UserDefault.m */; };
@@ -706,7 +705,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = RadioServersLLC;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WJRS" */;
@@ -772,7 +771,6 @@
 				4A05E4791B5A2865000E7305 /* sendbutton@2x.png in Resources */,
 				4A05E45C1B5A2865000E7305 /* information_icon@2x.png in Resources */,
 				4A05E4501B5A2865000E7305 /* divider_line@2x.png in Resources */,
-				4A05E4AC1B5A2923000E7305 /* WJRS-Info.plist in Resources */,
 				09AD14D81C8DA5300089B204 /* bg_radio_page.png in Resources */,
 				C5DBF9191B6B3F8300DA07C8 /* 06_menu_stack@2x.png in Resources */,
 				4A05E4381B5A2865000E7305 /* about-button.png in Resources */,
@@ -920,7 +918,6 @@
 			baseConfigurationReference = A440AC3E7668261D88D71FBA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -966,7 +963,6 @@
 			baseConfigurationReference = CEC48A1F94B40D6885BDA3F2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -1008,9 +1004,9 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Radioservers, LLC (65X33U46ZY)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Radioservers, LLC (65X33U46ZY)";
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -1027,7 +1023,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Radioservers, LLC (65X33U46ZY)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Radioservers, LLC (65X33U46ZY)";
 				GCC_C_LANGUAGE_STANDARD = c99;
