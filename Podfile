@@ -9,8 +9,6 @@ target 'WJRS' do
 
   pod 'AFNetworking'
   pod 'HTProgressHUD'
-  pod 'SDWebImage'
   pod 'ICTKit', '~>1.0.1'
-  pod 'GoogleAnalytics'
 
 end
