@@ -241,7 +241,7 @@
             newLabel.text = [NSString stringWithFormat:@"%li min", (long)row];
     } else {
         if (component == 0) {
-            newLabel.text = [NSString stringWithFormat:@"%li", row+1];
+            newLabel.text = [NSString stringWithFormat:@"%li", (long)row+1];
         } else {
             if (component == 0 || component == 1) {
                 newLabel.text = [NSString stringWithFormat:@"%li", (long)row];
