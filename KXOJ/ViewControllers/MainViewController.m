@@ -12,6 +12,8 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "Header.h"
 #import "RecentSongViewController.h"
+#import "NSString+HTML.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface MainViewController() <UIWebViewDelegate, AVAudioSessionDelegate, NSXMLParserDelegate>
 {
@@ -30,6 +32,18 @@
 
 
 @implementation MainViewController
+{
+    NSMutableArray *feeds;
+    NSMutableDictionary *feeditem;
+    NSMutableString *title;
+    NSMutableString *link;
+    NSMutableString *songguid;
+    NSMutableString *songdescription;
+    NSMutableString *songmedia;
+    NSMutableString *pubDate;
+    
+    NSString *element;
+}
 
 @synthesize radiosound;
 
@@ -56,6 +70,10 @@
     [self updatebuttonstatus];
     
     [self addBanner];
+    
+    // Setup timer to get feed content periodicallly.
+    NSTimer *feedTimer = [NSTimer scheduledTimerWithTimeInterval:45 target:self selector:@selector(getFeedContent) userInfo:nil repeats:YES];
+    [feedTimer fire];
 }
 
 - (void)addBanner {
@@ -181,7 +199,7 @@
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
 }
 
-- (void)interruption:(NSNotification*)notification {
+- (void)interruption:(NSNotification *)notification {
     NSDictionary *interuptionDict = notification.userInfo;
     NSUInteger interuptionType = (NSUInteger)[interuptionDict valueForKey:AVAudioSessionInterruptionTypeKey];
     
@@ -199,4 +217,82 @@
 #endif
 }
 
+#pragma mark - Get Feed Content
+
+- (void)getFeedContent {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    [manager GET:FEED_URL parameters:nil progress:nil success:^(NSURLSessionDataTask * task, id responseObject) {
+        feeds = [NSMutableArray array];
+        
+        NSXMLParser *parser = [[NSXMLParser alloc] initWithData:responseObject];
+        [parser setDelegate:self];
+        [parser setShouldResolveExternalEntities:NO];
+        [parser parse];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@", error);
+    }];
+}
+
+#pragma mark - NSXMLParserDelegate Methods
+
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary<NSString *,NSString *> *)attributeDict {
+    element = elementName;
+    if ([element isEqualToString:@"item"]) {
+        feeditem = [[NSMutableDictionary alloc] init];
+        title = [[NSMutableString alloc] init];
+        link = [[NSMutableString alloc] init];
+        songguid = [[NSMutableString alloc] init];
+        songdescription = [[NSMutableString alloc] init];
+        pubDate = [[NSMutableString alloc] init];
+        songmedia = [[NSMutableString alloc] init];
+    } else if([elementName isEqualToString:@"media:thumbnail"]) {
+        songmedia = [[NSMutableString alloc] init];
+        NSString *string = [attributeDict objectForKey:@"url"];
+        [songmedia appendString:string];
+    }
+}
+
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
+    if ([elementName isEqualToString:@"item"]) {
+        [feeditem setObject:title forKey:@"title"];
+        [feeditem setObject:link forKey:@"link"];
+        [feeditem setObject:songguid forKey:@"songguid"];
+        [feeditem setObject:songdescription forKey:@"songdescription"];
+        [feeditem setObject:songmedia forKey:@"songmedia"];
+        [feeditem setObject:pubDate forKey:@"pubDate"];
+        
+        [feeds addObject:[feeditem copy]];
+    }
+}
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
+    if ([element isEqualToString:@"title"]) {
+        [title appendString:[string kv_decodeHTMLCharacterEntities]];
+    } else if ([element isEqualToString:@"link"]) {
+        [link appendString:[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
+    } else if ([element isEqualToString:@"guid"]) {
+        [songguid appendString:string];
+    } else if ([element isEqualToString:@"description"]) {
+        [songdescription appendString:[string kv_decodeHTMLCharacterEntities]];
+    } else if ([element isEqualToString:@"media:thumbnail"]) {
+        [songmedia appendString:string];
+    } else if ([element isEqualToString:@"pubDate"]) {
+        [pubDate appendString:string];
+    }
+}
+
+- (void)parserDidEndDocument:(NSXMLParser *)parser {
+    NSDictionary *currentSong = [feeds firstObject];
+    lblTitle.text = currentSong[@"title"];
+    lblArtist.text = [currentSong[@"songdescription"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *imageURL = [currentSong[@"songmedia"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    [ivCoverImage setImageWithURL:[NSURL URLWithString:imageURL]];
+}
+
 @end
+
+
+
