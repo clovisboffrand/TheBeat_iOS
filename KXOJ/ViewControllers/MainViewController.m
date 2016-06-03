@@ -11,6 +11,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import "Header.h"
+#import "RecentSongViewController.h"
 
 @interface MainViewController()
 {
@@ -107,6 +108,8 @@
     }
 }
 
+#pragma mark - Button Action Methods
+
 - (IBAction)playbutton {
     if (radiosound.rate == 1.0) {
         [self pauseCurrentTrack];
@@ -115,15 +118,22 @@
     }
 }
 
+- (IBAction)stopTapped:(id)sender {
+    [self pauseCurrentTrack];
+}
+
+- (IBAction)didTapGoRecent:(id)sender {
+    RecentSongViewController *viewController = [[RecentSongViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    [navController.navigationBar custom];
+    [self presentViewController:navController animated:YES completion:nil];
+}
+
 - (void)playCurrentTrack {
     [self.radiosound play];
     
     // Update image states to reflect "Pause" option
     [self.playpausebutton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
-}
-
-- (IBAction)stopTapped:(id)sender {
-    [self pauseCurrentTrack];
 }
 
 - (void)pauseCurrentTrack {
