@@ -49,3 +49,4 @@
 #define TINT_DEF_COLR               @"13016c"
 
 #define STREAM_URL                  @"http://ic2.christiannetcast.com/wqme-fm"
+#define FEED_URL                    @"https://streamdb7web.securenetsystems.net/player_status_update/BEAT_history_rss.xml"

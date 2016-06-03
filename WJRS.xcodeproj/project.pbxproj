@@ -15,6 +15,9 @@
 		09717FA91D0009E600B992CF /* bg_radio_page.png in Resources */ = {isa = PBXBuildFile; fileRef = 09717FA81D0009E600B992CF /* bg_radio_page.png */; };
 		099079651BB84A6400A7F158 /* icon_web.png in Resources */ = {isa = PBXBuildFile; fileRef = 099079631BB84A6400A7F158 /* icon_web.png */; };
 		099079661BB84A6400A7F158 /* icon_web@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 099079641BB84A6400A7F158 /* icon_web@2x.png */; };
+		09961BF81D01933B00B1AE08 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 09961BF71D01933B00B1AE08 /* NSString+HTML.m */; };
+		09961BFF1D0197D400B1AE08 /* PlaylistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09961BFD1D0197D400B1AE08 /* PlaylistCell.m */; };
+		09961C001D0197D400B1AE08 /* PlaylistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09961BFE1D0197D400B1AE08 /* PlaylistCell.xib */; };
 		09AD14E01C8DB7A00089B204 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14DF1C8DB7A00089B204 /* WebViewController.m */; };
 		09AD14E31C8DBD110089B204 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14E21C8DBD110089B204 /* AlarmViewController.m */; };
 		09AD14EC1C8DCD0F0089B204 /* ClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14EA1C8DCD0F0089B204 /* ClockViewController.m */; };
@@ -113,6 +116,11 @@
 		09717FA81D0009E600B992CF /* bg_radio_page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_radio_page.png; sourceTree = "<group>"; };
 		099079631BB84A6400A7F158 /* icon_web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_web.png; sourceTree = "<group>"; };
 		099079641BB84A6400A7F158 /* icon_web@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_web@2x.png"; sourceTree = "<group>"; };
+		09961BF61D01933B00B1AE08 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		09961BF71D01933B00B1AE08 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		09961BFC1D0197D400B1AE08 /* PlaylistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistCell.h; sourceTree = "<group>"; };
+		09961BFD1D0197D400B1AE08 /* PlaylistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistCell.m; sourceTree = "<group>"; };
+		09961BFE1D0197D400B1AE08 /* PlaylistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaylistCell.xib; sourceTree = "<group>"; };
 		09AD14DE1C8DB7A00089B204 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		09AD14DF1C8DB7A00089B204 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		09AD14E11C8DBD110089B204 /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
@@ -353,6 +361,9 @@
 				09CA0B881D0123B7006AFFCD /* RecentSongViewController.h */,
 				09CA0B891D0123B7006AFFCD /* RecentSongViewController.m */,
 				09CA0B8A1D0123B7006AFFCD /* RecentSongViewController.xib */,
+				09961BFC1D0197D400B1AE08 /* PlaylistCell.h */,
+				09961BFD1D0197D400B1AE08 /* PlaylistCell.m */,
+				09961BFE1D0197D400B1AE08 /* PlaylistCell.xib */,
 			);
 			name = MainModule;
 			sourceTree = "<group>";
@@ -486,6 +497,8 @@
 				4A05E38A1B5A2865000E7305 /* CommonHelpers.m */,
 				4A05E4DA1B5AC47B000E7305 /* NavigationBarCustom.h */,
 				4A05E4DB1B5AC47B000E7305 /* NavigationBarCustom.m */,
+				09961BF61D01933B00B1AE08 /* NSString+HTML.h */,
+				09961BF71D01933B00B1AE08 /* NSString+HTML.m */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -668,6 +681,7 @@
 				4A05E4711B5A2865000E7305 /* recordbutton@2x.png in Resources */,
 				09717FA91D0009E600B992CF /* bg_radio_page.png in Resources */,
 				4A05E4551B5A2865000E7305 /* hourbg.png in Resources */,
+				09961C001D0197D400B1AE08 /* PlaylistCell.xib in Resources */,
 				091083151D00275A0088C319 /* shoutoutimage.png in Resources */,
 				4A05E47D1B5A2865000E7305 /* icon_social@2x.png in Resources */,
 				4A05E4E41B5AC97C000E7305 /* btn_back@2x.png in Resources */,
@@ -739,7 +753,9 @@
 				4A05E4BF1B5A30BF000E7305 /* UserDefault.m in Sources */,
 				4A05E4C61B5A3108000E7305 /* XMLDictionary.m in Sources */,
 				4A05E42F1B5A2865000E7305 /* MyWindow.m in Sources */,
+				09961BF81D01933B00B1AE08 /* NSString+HTML.m in Sources */,
 				4A05E4C51B5A3108000E7305 /* XMLConverter.m in Sources */,
+				09961BFF1D0197D400B1AE08 /* PlaylistCell.m in Sources */,
 				09AD14F11C8DCFD50089B204 /* SocialViewController.m in Sources */,
 				4A05E4981B5A2865000E7305 /* MainViewController.m in Sources */,
 				09AD14E01C8DB7A00089B204 /* WebViewController.m in Sources */,
