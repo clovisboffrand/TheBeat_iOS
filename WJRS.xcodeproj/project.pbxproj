@@ -25,6 +25,8 @@
 		09AD14FA1C8DEE0F0089B204 /* ShoutOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14F91C8DEE0F0089B204 /* ShoutOutViewController.m */; };
 		09AD15001C8DF89E0089B204 /* icon_shoutout.png in Resources */ = {isa = PBXBuildFile; fileRef = 09AD14FE1C8DF89E0089B204 /* icon_shoutout.png */; };
 		09AD15011C8DF89E0089B204 /* icon_shoutout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09AD14FF1C8DF89E0089B204 /* icon_shoutout@2x.png */; };
+		09CA0B821D011992006AFFCD /* bg_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 09CA0B811D011992006AFFCD /* bg_splash.png */; };
+		09CA0B841D011CC7006AFFCD /* img_top_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 09CA0B831D011CC7006AFFCD /* img_top_logo.png */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
@@ -125,6 +127,8 @@
 		09AD14F91C8DEE0F0089B204 /* ShoutOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutOutViewController.m; sourceTree = "<group>"; };
 		09AD14FE1C8DF89E0089B204 /* icon_shoutout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_shoutout.png; sourceTree = "<group>"; };
 		09AD14FF1C8DF89E0089B204 /* icon_shoutout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_shoutout@2x.png"; sourceTree = "<group>"; };
+		09CA0B811D011992006AFFCD /* bg_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_splash.png; sourceTree = "<group>"; };
+		09CA0B831D011CC7006AFFCD /* img_top_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_top_logo.png; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* Bristol Beat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bristol Beat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -268,7 +272,9 @@
 				4A05E3F51B5A2865000E7305 /* Stop@2x.png */,
 				4A4965241B5B7A4E00E4CF2D /* icn_chanel.png */,
 				4A4965251B5B7A4E00E4CF2D /* icn_chanel@2x.png */,
+				09CA0B831D011CC7006AFFCD /* img_top_logo.png */,
 				09717FA81D0009E600B992CF /* bg_radio_page.png */,
+				09CA0B811D011992006AFFCD /* bg_splash.png */,
 				4A05E3DC1B5A2865000E7305 /* pause.png */,
 				4A05E3DE1B5A2865000E7305 /* play.png */,
 			);
@@ -599,6 +605,7 @@
 			files = (
 				4A05E4781B5A2865000E7305 /* sendbutton.png in Resources */,
 				4A05E4761B5A2865000E7305 /* samplebutton.png in Resources */,
+				09CA0B841D011CC7006AFFCD /* img_top_logo.png in Resources */,
 				4A05E48B1B5A2865000E7305 /* website@2x.png in Resources */,
 				0910830A1D001D790088C319 /* ic_building.png in Resources */,
 				4A05E4741B5A2865000E7305 /* reload_new.png in Resources */,
@@ -634,6 +641,7 @@
 				4A05E4841B5A2865000E7305 /* Stop@2x.png in Resources */,
 				4A05E4491B5A2865000E7305 /* call.png in Resources */,
 				4A05E46B1B5A2865000E7305 /* pause.png in Resources */,
+				09CA0B821D011992006AFFCD /* bg_splash.png in Resources */,
 				4A05E4751B5A2865000E7305 /* reload_new@2x.png in Resources */,
 				4A05E47A1B5A2865000E7305 /* sms.png in Resources */,
 				09AD15011C8DF89E0089B204 /* icon_shoutout@2x.png in Resources */,
