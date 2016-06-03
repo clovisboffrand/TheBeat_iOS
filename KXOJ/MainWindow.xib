@@ -133,10 +133,10 @@
                                         <rect key="frame" x="121" y="78" width="78" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CIY-qW-Laf">
-                                        <rect key="frame" x="254" y="84" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CIY-qW-Laf">
+                                        <rect key="frame" x="274" y="81" width="37" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" image="playlisticon.png"/>
                                         <connections>
                                             <action selector="didTapGoRecent:" destination="108" eventType="touchUpInside" id="fFP-s7-VYX"/>
                                         </connections>
@@ -705,6 +705,7 @@
         <image name="listenbutton.png" width="298" height="41"/>
         <image name="new-app-background.jpg" width="640" height="960"/>
         <image name="play.png" width="26" height="26"/>
+        <image name="playlisticon.png" width="37" height="39"/>
         <image name="recordbutton.png" width="298" height="41"/>
         <image name="reload_new.png" width="25" height="25"/>
         <image name="samplebutton.png" width="298" height="41"/>
