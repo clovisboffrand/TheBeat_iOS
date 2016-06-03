@@ -18,6 +18,7 @@
     IBOutlet UIWebView *_adWebView;
     IBOutlet UIView *volumeSlider;
     IBOutlet UIButton *playpausebutton;
+    
     IBOutlet UIImageView *ivCoverImage;
     IBOutlet UILabel *lblTitle;
     IBOutlet UILabel *lblArtist;
@@ -150,15 +151,8 @@
 }
 
 #pragma mark - Notification Stream Radio
+
 - (void)reloadRadioStreaming {
-    /* Pick any one of them */
-    // 1. Overriding the output audio route
-    //UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
-    //AudioSessionSetProperty(kAudioSessionProperty_OverrideAudioRoute, sizeof(audioRouteOverride), &audioRouteOverride);
-    
-    // 2. Changing the default output audio route
-    //    UInt32 doChangeDefaultRoute = 1;
-    //    AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryDefaultToSpeaker, sizeof(doChangeDefaultRoute), &doChangeDefaultRoute);
     AVAudioSession *session = [AVAudioSession sharedInstance];
     
     NSError *setCategoryError = nil;
