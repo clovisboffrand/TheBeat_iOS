@@ -141,6 +141,24 @@
                                             <action selector="didTapGoRecent:" destination="108" eventType="touchUpInside" id="fFP-s7-VYX"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="P68-9U-Ww6">
+                                        <rect key="frame" x="60" y="148" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5sI-Qq-f29">
+                                        <rect key="frame" x="0.0" y="387" width="320" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pVz-HG-HTV">
+                                        <rect key="frame" x="0.0" y="423" width="320" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -148,6 +166,9 @@
                             <navigationItem key="navigationItem" title="Radio" id="jfk-pz-PL3"/>
                             <connections>
                                 <outlet property="_adWebView" destination="svn-0E-d2G" id="wR6-dp-vVQ"/>
+                                <outlet property="ivCoverImage" destination="P68-9U-Ww6" id="6hX-mo-a0X"/>
+                                <outlet property="lblArtist" destination="pVz-HG-HTV" id="Jzu-3W-TtO"/>
+                                <outlet property="lblTitle" destination="5sI-Qq-f29" id="llM-HL-MTd"/>
                                 <outlet property="playpausebutton" destination="406" id="410"/>
                                 <outlet property="volumeSlider" destination="405" id="409"/>
                             </connections>

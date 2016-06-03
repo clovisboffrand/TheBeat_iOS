@@ -13,17 +13,24 @@
 #import "Header.h"
 #import "RecentSongViewController.h"
 
-@interface MainViewController()
+@interface MainViewController() <UIWebViewDelegate, AVAudioSessionDelegate, NSXMLParserDelegate>
 {
     IBOutlet UIWebView *_adWebView;
+    IBOutlet UIView *volumeSlider;
+    IBOutlet UIButton *playpausebutton;
+    IBOutlet UIImageView *ivCoverImage;
+    IBOutlet UILabel *lblTitle;
+    IBOutlet UILabel *lblArtist;
 }
 
+@property (nonatomic, strong) AVPlayer *radiosound;
+
 @end
+
 
 @implementation MainViewController
 
 @synthesize radiosound;
-@synthesize playpausebutton;
 
 - (void)viewDidLoad {
     
@@ -54,8 +61,9 @@
     [_adWebView loadHTMLString:[CommonHelpers HTMLBodyOfBannerView] baseURL:nil];
 }
 
+#pragma mark - WebView Delegate Methods
+
 - (BOOL)webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
-    
     if (inType == UIWebViewNavigationTypeLinkClicked) {
         [[UIApplication sharedApplication] openURL:[inRequest URL]];
         return NO;
@@ -64,8 +72,10 @@
     return YES;
 }
 
+#pragma mark - Play/Pause Radio Streaming
+
 - (void)playRadio {
-    if ([self.playpausebutton.imageView.image isEqual:[UIImage imageNamed:@"play.png"]]) {
+    if ([playpausebutton.imageView.image isEqual:[UIImage imageNamed:@"play.png"]]) {
         [self playCurrentTrack];
     }
 }
@@ -78,10 +88,6 @@
     if ([self.radiosound rate] == 0.0) {
         [self playCurrentTrack];
     }
-}
-
-- (void)buffering {
-    
 }
 
 - (void)didSetAlarm {
@@ -102,9 +108,9 @@
 
 - (void)updatebuttonstatus {
     if (radiosound.rate == 1.0) {
-        [self.playpausebutton setImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
+        [playpausebutton setImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
     } else {
-        [self.playpausebutton setImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
+        [playpausebutton setImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
     }
 }
 
@@ -133,14 +139,14 @@
     [self.radiosound play];
     
     // Update image states to reflect "Pause" option
-    [self.playpausebutton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
+    [playpausebutton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
 }
 
 - (void)pauseCurrentTrack {
     [self.radiosound pause];
     
     // Update image states to reflect "Play" option
-    [self.playpausebutton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+    [playpausebutton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
 }
 
 #pragma mark - Notification Stream Radio
@@ -197,7 +203,6 @@
         [self endInterruption];
     }
 #endif
-    
 }
 
 @end

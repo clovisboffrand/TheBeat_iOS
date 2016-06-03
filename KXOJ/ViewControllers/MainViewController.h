@@ -7,17 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
-#import <AudioToolbox/AudioToolbox.h>
-#import "Header.h"
 
-@interface MainViewController : UIViewController <UIWebViewDelegate, AVAudioSessionDelegate, NSXMLParserDelegate>
-{
-    IBOutlet UIView *volumeSlider;
-    IBOutlet UIButton *playpausebutton;
-}
-
-@property (nonatomic, strong) AVPlayer *radiosound;
-@property (nonatomic, strong) UIButton *playpausebutton;
+@interface MainViewController : UIViewController
 
 @end
