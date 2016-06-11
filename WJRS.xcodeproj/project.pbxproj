@@ -87,7 +87,6 @@
 		4A05E48E1B5A2865000E7305 /* new-app-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E4001B5A2865000E7305 /* new-app-background.jpg */; };
 		4A05E4981B5A2865000E7305 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4121B5A2865000E7305 /* MainViewController.m */; };
 		4A05E4AA1B5A290A000E7305 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4A91B5A290A000E7305 /* main.m */; };
-		4A05E4BF1B5A30BF000E7305 /* UserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4BB1B5A30BF000E7305 /* UserDefault.m */; };
 		4A05E4C51B5A3108000E7305 /* XMLConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4C21B5A3108000E7305 /* XMLConverter.m */; };
 		4A05E4C61B5A3108000E7305 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4C41B5A3108000E7305 /* XMLDictionary.m */; };
 		4A05E4DD1B5AC47B000E7305 /* NavigationBarCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4DB1B5AC47B000E7305 /* NavigationBarCustom.m */; };
@@ -206,8 +205,6 @@
 		4A05E4A91B5A290A000E7305 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = KXOJ/main.m; sourceTree = "<group>"; };
 		4A05E4AB1B5A2923000E7305 /* WJRS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "WJRS-Info.plist"; path = "KXOJ/WJRS-Info.plist"; sourceTree = "<group>"; };
 		4A05E4B41B5A30BF000E7305 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		4A05E4BA1B5A30BF000E7305 /* UserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefault.h; sourceTree = "<group>"; };
-		4A05E4BB1B5A30BF000E7305 /* UserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefault.m; sourceTree = "<group>"; };
 		4A05E4C11B5A3108000E7305 /* XMLConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLConverter.h; sourceTree = "<group>"; };
 		4A05E4C21B5A3108000E7305 /* XMLConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLConverter.m; sourceTree = "<group>"; };
 		4A05E4C31B5A3108000E7305 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
@@ -496,8 +493,6 @@
 			children = (
 				4A05E4C01B5A3108000E7305 /* XMLReader */,
 				4A05E4B41B5A30BF000E7305 /* Header.h */,
-				4A05E4BA1B5A30BF000E7305 /* UserDefault.h */,
-				4A05E4BB1B5A30BF000E7305 /* UserDefault.m */,
 				4A05E3891B5A2865000E7305 /* CommonHelpers.h */,
 				4A05E38A1B5A2865000E7305 /* CommonHelpers.m */,
 				4A05E4DA1B5AC47B000E7305 /* NavigationBarCustom.h */,
@@ -758,7 +753,6 @@
 			files = (
 				09AD14FA1C8DEE0F0089B204 /* ShoutOutViewController.m in Sources */,
 				09AD14E31C8DBD110089B204 /* AlarmViewController.m in Sources */,
-				4A05E4BF1B5A30BF000E7305 /* UserDefault.m in Sources */,
 				4A05E4C61B5A3108000E7305 /* XMLDictionary.m in Sources */,
 				4A05E42F1B5A2865000E7305 /* MyWindow.m in Sources */,
 				09961BF81D01933B00B1AE08 /* NSString+HTML.m in Sources */,
