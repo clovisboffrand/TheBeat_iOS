@@ -22,6 +22,8 @@
         [[UIApplication sharedApplication] setStatusBarHidden:NO];
     }
     
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
+    
     self.tabBarController.delegate = self;
     self.tabBarController.tabBar.tintColor = UIColorFromString(TINT_DEF_COLR, 1);
     
