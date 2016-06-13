@@ -124,9 +124,7 @@
 #pragma mark - Play/Pause Radio Streaming
 
 - (void)playRadio {
-    if ([playpausebutton.imageView.image isEqual:[UIImage imageNamed:@"play.png"]]) {
-        [self playCurrentTrack];
-    }
+    [self playCurrentTrack];
 }
 
 - (void)pauseRadio {
