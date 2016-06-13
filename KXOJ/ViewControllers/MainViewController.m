@@ -14,6 +14,7 @@
 #import "RecentSongViewController.h"
 #import "NSString+HTML.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
+#import "Reachability.h"
 
 @interface MainViewController() <UIWebViewDelegate, AVAudioSessionDelegate, NSXMLParserDelegate>
 {
@@ -45,10 +46,7 @@
     NSString *element;
 }
 
-@synthesize radiosound;
-
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     [self reloadRadioStreaming];
@@ -58,7 +56,6 @@
     // then swipes right to reveal multimedia control buttons).
     // See MyWindow.h for more info.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbutton) name:@"TogglePlayPause" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reOpenApp) name:@"reOpenApp" object:nil];
     
     // Add notification methods
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didSetAlarm) name:@"setAlarm" object:nil];
@@ -74,6 +71,25 @@
     // Setup timer to get feed content periodicallly.
     NSTimer *feedTimer = [NSTimer scheduledTimerWithTimeInterval:45 target:self selector:@selector(getFeedContent) userInfo:nil repeats:YES];
     [feedTimer fire];
+    
+    // Initialize Reachability
+    Reachability *reachability = [Reachability reachabilityWithHostName:@"www.google.com"];
+    
+    // Start Monitoring
+    NSLog(@"Start Reachability Monitoring");
+    [reachability startNotifier];
+    
+    // Add observer for reachability change.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityDidChange:) name:kReachabilityChangedNotification object:nil];
+    
+    // Add volume control.
+    MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame:volumeSlider.bounds];
+    [volumeSlider addSubview:volumeView];
+    [volumeView sizeToFit];
+    
+    // share instance for audio remote control
+    // Registers this class as the delegate of the audio session.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(interruption:) name:AVAudioSessionInterruptionNotification object:nil];
 }
 
 - (void)addBanner {
@@ -91,6 +107,20 @@
     return YES;
 }
 
+#pragma mark - Reachability Observer
+
+- (void)reachabilityDidChange:(NSNotification *)notification {
+    Reachability *reachability = (Reachability *)[notification object];
+    
+    if ([reachability isReachable]) {
+        NSLog(@"Reachable");
+        [self playRadio];
+    } else {
+        NSLog(@"Unreachable");
+        [self pauseRadio];
+    }
+}
+
 #pragma mark - Play/Pause Radio Streaming
 
 - (void)playRadio {
@@ -103,18 +133,12 @@
     [self pauseCurrentTrack];
 }
 
-- (void)reOpenApp {
-    if ([self.radiosound rate] == 0.0) {
-        [self playCurrentTrack];
-    }
-}
-
 - (void)didSetAlarm {
     [self pauseCurrentTrack];
 }
 
 - (void)updateStream {
-    if (radiosound.rate == 1.0) {
+    if (self.radiosound.rate == 1.0) {
         [self pauseCurrentTrack];
     } else {
         [self playCurrentTrack];
@@ -126,7 +150,7 @@
 }
 
 - (void)updatebuttonstatus {
-    if (radiosound.rate == 1.0) {
+    if (self.radiosound.rate == 1.0) {
         [playpausebutton setImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
     } else {
         [playpausebutton setImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
@@ -136,7 +160,7 @@
 #pragma mark - Button Action Methods
 
 - (IBAction)playbutton {
-    if (radiosound.rate == 1.0) {
+    if (self.radiosound.rate == 1.0) {
         [self pauseCurrentTrack];
     } else {
         [self playCurrentTrack];
@@ -155,7 +179,11 @@
 }
 
 - (void)playCurrentTrack {
-    [self.radiosound play];
+    if (self.radiosound.rate == 0.0) {
+        [self reloadRadioStreaming];
+    } else {
+        [self.radiosound play];
+    }
     
     // Update image states to reflect "Pause" option
     [playpausebutton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
@@ -180,20 +208,8 @@
     }
     
     NSURL *url = [NSURL URLWithString:STREAM_URL];
-    radiosound = [[AVPlayer alloc] initWithURL:url];
-    [radiosound play];
-    
-    // Volume control
-    MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame:volumeSlider.bounds];
-    [volumeSlider addSubview:volumeView];
-    [volumeView sizeToFit];
-    
-    // share instance for audio remote control
-    // Registers this class as the delegate of the audio session.
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(interruption:)
-                                                 name:AVAudioSessionInterruptionNotification
-                                               object:nil];
+    self.radiosound = [[AVPlayer alloc] initWithURL:url];
+    [self.radiosound play];
     
     // Allow the app sound to continue to play when the screen is locked.
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];

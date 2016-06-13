@@ -21,6 +21,7 @@
 		09961C001D0197D400B1AE08 /* PlaylistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09961BFE1D0197D400B1AE08 /* PlaylistCell.xib */; };
 		09961C031D019F6700B1AE08 /* playlisticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 09961C011D019F6700B1AE08 /* playlisticon.png */; };
 		09961C041D019F6700B1AE08 /* playlisticon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09961C021D019F6700B1AE08 /* playlisticon@2x.png */; };
+		0996D3E21D0F0538004BB622 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0996D3E11D0F0538004BB622 /* Reachability.m */; };
 		09AD14E01C8DB7A00089B204 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14DF1C8DB7A00089B204 /* WebViewController.m */; };
 		09AD14E31C8DBD110089B204 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14E21C8DBD110089B204 /* AlarmViewController.m */; };
 		09AD14EC1C8DCD0F0089B204 /* ClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14EA1C8DCD0F0089B204 /* ClockViewController.m */; };
@@ -125,6 +126,8 @@
 		09961BFE1D0197D400B1AE08 /* PlaylistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaylistCell.xib; sourceTree = "<group>"; };
 		09961C011D019F6700B1AE08 /* playlisticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playlisticon.png; sourceTree = "<group>"; };
 		09961C021D019F6700B1AE08 /* playlisticon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playlisticon@2x.png"; sourceTree = "<group>"; };
+		0996D3E01D0F0538004BB622 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		0996D3E11D0F0538004BB622 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		09AD14DE1C8DB7A00089B204 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		09AD14DF1C8DB7A00089B204 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		09AD14E11C8DBD110089B204 /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
@@ -499,6 +502,8 @@
 				4A05E4DB1B5AC47B000E7305 /* NavigationBarCustom.m */,
 				09961BF61D01933B00B1AE08 /* NSString+HTML.h */,
 				09961BF71D01933B00B1AE08 /* NSString+HTML.m */,
+				0996D3E01D0F0538004BB622 /* Reachability.h */,
+				0996D3E11D0F0538004BB622 /* Reachability.m */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -767,6 +772,7 @@
 				09CA0B8B1D0123B7006AFFCD /* RecentSongViewController.m in Sources */,
 				4A05E4321B5A2865000E7305 /* Radio99AppDelegate.m in Sources */,
 				09AD14EC1C8DCD0F0089B204 /* ClockViewController.m in Sources */,
+				0996D3E21D0F0538004BB622 /* Reachability.m in Sources */,
 				4A05E4AA1B5A290A000E7305 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
