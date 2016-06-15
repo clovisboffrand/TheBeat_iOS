@@ -114,7 +114,7 @@
     
     if ([reachability isReachable]) {
         NSLog(@"Reachable");
-        [self playRadio];
+        [self reloadRadioStreaming];
     } else {
         NSLog(@"Unreachable");
         [self pauseRadio];
@@ -208,6 +208,7 @@
     NSURL *url = [NSURL URLWithString:STREAM_URL];
     self.radiosound = [[AVPlayer alloc] initWithURL:url];
     [self.radiosound play];
+    [self updatebuttonstatus];
     
     // Allow the app sound to continue to play when the screen is locked.
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
