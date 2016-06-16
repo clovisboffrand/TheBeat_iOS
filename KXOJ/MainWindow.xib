@@ -27,7 +27,7 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
             <nil key="simulatedBottomBarMetrics"/>
-            <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" selectedItem="pWh-35-63F" id="107">
+            <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" selectedItem="378" id="107">
                 <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -222,7 +222,7 @@
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <extendedEdge key="edgesForExtendedLayout"/>
-                            <navigationItem key="navigationItem" title="Events" id="377"/>
+                            <navigationItem key="navigationItem" title="Website" id="377"/>
                             <connections>
                                 <outlet property="adWebView" destination="Nad-qh-wg9" id="lWJ-LA-de1"/>
                                 <outlet property="progress" destination="loI-ep-IG6" id="tie-Zo-lE2"/>
