@@ -10,7 +10,7 @@
 #import "Header.h"
 
 #define SAMPLE_LINK @"http://www.bristolbeat.com/app/sample.mp3"
-#define UPLOAD_LINK @"http://radioserversapps.com/bristolbeat/app/"
+#define UPLOAD_LINK @"http://radioserversapps.com/bristolbeat/app/upload.php"
 
 @implementation ShoutOutViewController
 
