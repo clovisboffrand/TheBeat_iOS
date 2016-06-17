@@ -36,15 +36,15 @@
     
     NSArray *timearray=[[[NSUserDefaults standardUserDefaults] objectForKey:@"wakeup"] componentsSeparatedByString:@":"];
     int wakehour = [[timearray objectAtIndex:0]intValue];
-    int wakemin=[[timearray objectAtIndex:1]intValue];
+    int wakemin = [[timearray objectAtIndex:1]intValue];
     
     NSString *displaymin;
     NSString *displayhour;
     
     if (wakemin < 10) {
-        displaymin=[NSString stringWithFormat:@"0%i",wakemin];
+        displaymin = [NSString stringWithFormat:@"0%i",wakemin];
     } else {
-        displaymin=[NSString stringWithFormat:@"%i",wakemin];
+        displaymin = [NSString stringWithFormat:@"%i",wakemin];
     }
     
     if (wakehour < 12) {
@@ -52,17 +52,17 @@
             displayhour = [NSString stringWithFormat:@"0%i", wakehour];
         else
             displayhour = [NSString stringWithFormat:@"%i", wakehour];
-        lblAlarm.text=[NSString stringWithFormat:@"Alarm %@:%@ AM", displayhour, displaymin];
+        lblAlarm.text = [NSString stringWithFormat:@"Alarm %@:%@ AM", displayhour, displaymin];
     } else if (wakehour == 12) {
-        lblAlarm.text=[NSString stringWithFormat:@"Alarm 12:%@ PM", displaymin];
+        lblAlarm.text = [NSString stringWithFormat:@"Alarm 12:%@ PM", displaymin];
     } else if (wakehour < 24) {
         if (wakehour - 12 < 10)
             displayhour = [NSString stringWithFormat:@"0%i", wakehour - 12];
         else
             displayhour = [NSString stringWithFormat:@"%i", wakehour - 12];
-        lblAlarm.text=[NSString stringWithFormat:@"Alarm %@:%@ PM", displayhour, displaymin];
+        lblAlarm.text = [NSString stringWithFormat:@"Alarm %@:%@ PM", displayhour, displaymin];
     } else if (wakehour == 24) {
-        lblAlarm.text=[NSString stringWithFormat:@"Alarm %i:%@ AM", 12, displaymin];
+        lblAlarm.text = [NSString stringWithFormat:@"Alarm %i:%@ AM", 12, displaymin];
     } else {
         if (wakehour - 24 < 10)
             displayhour = [NSString stringWithFormat:@"0%i", wakehour -24];
@@ -70,11 +70,13 @@
             displayhour = [NSString stringWithFormat:@"%i", wakehour - 24];
         
         if (wakehour < 36) {
-            lblAlarm.text=[NSString stringWithFormat:@"Alarm %@:%@ AM", displayhour, displaymin];
+            lblAlarm.text = [NSString stringWithFormat:@"Alarm %@:%@ AM", displayhour, displaymin];
         } else {
-            lblAlarm.text=[NSString stringWithFormat:@"Alarm %@:%@ PM", displayhour, displaymin];
+            lblAlarm.text = [NSString stringWithFormat:@"Alarm %@:%@ PM", displayhour, displaymin];
         }
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTime) name:@"updateTime" object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
