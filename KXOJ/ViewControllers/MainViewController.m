@@ -304,7 +304,43 @@
     lblTitle.text = currentSong[@"title"];
     lblArtist.text = [currentSong[@"songdescription"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *imageURL = [currentSong[@"songmedia"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    [ivCoverImage setImageWithURL:[NSURL URLWithString:imageURL]];
+    // Update with title immediatly
+    [self updateNowPlayingInfoWithTitle:lblTitle.text artist:lblArtist.text image:nil];
+    // Load image in background
+    __weak __typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
+        dispatch_async(dispatch_get_main_queue(), ^(){
+            UIImage *image = [UIImage imageWithData:imageData];
+            __typeof__(self) strongSelf = weakSelf;
+            if (strongSelf) {
+                // Update with image
+                [strongSelf->ivCoverImage setImage:image];
+                [strongSelf updateNowPlayingInfoWithTitle:strongSelf->lblTitle.text artist:strongSelf->lblArtist.text image:image];
+            }
+        });
+    });
+}
+
+#pragma mark - MPNowPlayingInfoCenter
+
+/// Updates track info on lockscreen, control center and any compatible BLE device
+- (void)updateNowPlayingInfoWithTitle:(NSString *)titleStr artist:(NSString *)artistStr image:(UIImage *)artwork {
+    NSLog(@"udate");
+    // don't pass nil, it will cause crash
+    NSMutableDictionary *playInfo = [NSMutableDictionary new];
+    if (titleStr) {
+        [playInfo setObject:titleStr forKey:MPMediaItemPropertyTitle];
+    }
+    if (artistStr) {
+        [playInfo setObject:artistStr forKey:MPMediaItemPropertyArtist];
+    }
+    if (artwork) {
+        MPMediaItemArtwork *cover = [[MPMediaItemArtwork alloc] initWithImage:artwork];
+        [playInfo setObject:cover forKey:MPMediaItemPropertyArtwork];
+    }
+    //
+    [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = playInfo;
 }
 
 @end

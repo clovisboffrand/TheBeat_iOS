@@ -22,7 +22,10 @@
         [[UIApplication sharedApplication] setStatusBarHidden:NO];
     }
     
-    [UIApplication sharedApplication].idleTimerDisabled = YES;
+    // Battery monitor
+    [self registerForBatteryStateChanges];
+    // Force updates at first time
+    [self batteryStateDidChange];
     
     self.tabBarController.delegate = self;
     self.tabBarController.tabBar.tintColor = UIColorFromString(TINT_DEF_COLR, 1);
@@ -37,6 +40,30 @@
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
     
+}
+
+#pragma mark -
+
+- (void)registerForBatteryStateChanges {
+    [[UIDevice currentDevice] setBatteryMonitoringEnabled:YES];
+    // Start tracking battery state
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(batteryStateDidChange)
+                                                 name:UIDeviceBatteryStateDidChangeNotification object:nil];
+}
+
+- (void)batteryStateDidChange {
+    UIDeviceBatteryState batteryState = [UIDevice currentDevice].batteryState;
+    //UIDeviceBatteryStateCharging - plugged in, less than 100%
+    //UIDeviceBatteryStateFull - plugged in, at 100%
+    if ((batteryState == UIDeviceBatteryStateCharging) || (batteryState == UIDeviceBatteryStateFull)) {
+        // DON'T let the device go to sleep
+        // a trick, you must set it NO before, it's apple's bug in some iOS versions
+        [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
+        [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    } else {
+        [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
+    }
 }
 
 @end
