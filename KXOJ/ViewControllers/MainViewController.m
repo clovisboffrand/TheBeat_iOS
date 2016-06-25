@@ -44,10 +44,13 @@
     NSMutableString *pubDate;
     
     NSString *element;
+    BOOL shouldPlay; //variable indicates that playback should be enabled
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    shouldPlay = YES;
     
     [self reloadRadioStreaming];
     
@@ -114,7 +117,9 @@
     
     if ([reachability isReachable]) {
         NSLog(@"Reachable");
-        [self reloadRadioStreaming];
+        if (shouldPlay) {
+            [self reloadRadioStreaming];
+        }
     } else {
         NSLog(@"Unreachable");
         [self pauseRadio];
@@ -160,12 +165,15 @@
 - (IBAction)playbutton {
     if (self.radiosound.rate == 1.0) {
         [self pauseCurrentTrack];
+        shouldPlay = NO;
     } else {
         [self playCurrentTrack];
+        shouldPlay = YES;
     }
 }
 
 - (IBAction)stopTapped:(id)sender {
+    shouldPlay = NO;
     [self pauseCurrentTrack];
 }
 
