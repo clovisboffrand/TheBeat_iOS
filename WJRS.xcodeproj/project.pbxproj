@@ -14,6 +14,7 @@
 		091083151D00275A0088C319 /* shoutoutimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 091083141D00275A0088C319 /* shoutoutimage.png */; };
 		0931A1FA1D02716E006A20D1 /* img_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0931A1F91D02716E006A20D1 /* img_logo.png */; };
 		09717FA91D0009E600B992CF /* bg_radio_page.png in Resources */ = {isa = PBXBuildFile; fileRef = 09717FA81D0009E600B992CF /* bg_radio_page.png */; };
+		0986B3761D20ADF10057C34C /* img_logo_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 0986B3751D20ADF10057C34C /* img_logo_full.png */; };
 		099079651BB84A6400A7F158 /* icon_web.png in Resources */ = {isa = PBXBuildFile; fileRef = 099079631BB84A6400A7F158 /* icon_web.png */; };
 		099079661BB84A6400A7F158 /* icon_web@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 099079641BB84A6400A7F158 /* icon_web@2x.png */; };
 		09961BF81D01933B00B1AE08 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 09961BF71D01933B00B1AE08 /* NSString+HTML.m */; };
@@ -117,6 +118,7 @@
 		0931A1F91D02716E006A20D1 /* img_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_logo.png; sourceTree = "<group>"; };
 		093C3AEC1BB8797500E72B1B /* WJRS_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WJRS_Prefix.pch; sourceTree = "<group>"; };
 		09717FA81D0009E600B992CF /* bg_radio_page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_radio_page.png; sourceTree = "<group>"; };
+		0986B3751D20ADF10057C34C /* img_logo_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_logo_full.png; sourceTree = "<group>"; };
 		099079631BB84A6400A7F158 /* icon_web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_web.png; sourceTree = "<group>"; };
 		099079641BB84A6400A7F158 /* icon_web@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_web@2x.png"; sourceTree = "<group>"; };
 		09961BF61D01933B00B1AE08 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				4A4965241B5B7A4E00E4CF2D /* icn_chanel.png */,
 				4A4965251B5B7A4E00E4CF2D /* icn_chanel@2x.png */,
 				0931A1F91D02716E006A20D1 /* img_logo.png */,
+				0986B3751D20ADF10057C34C /* img_logo_full.png */,
 				09CA0B831D011CC7006AFFCD /* img_top_logo.png */,
 				09717FA81D0009E600B992CF /* bg_radio_page.png */,
 				09CA0B811D011992006AFFCD /* bg_splash.png */,
@@ -660,6 +663,7 @@
 				4A05E4791B5A2865000E7305 /* sendbutton@2x.png in Resources */,
 				4A05E4521B5A2865000E7305 /* email@2x.png in Resources */,
 				4A05E4881B5A2865000E7305 /* twitter.png in Resources */,
+				0986B3761D20ADF10057C34C /* img_logo_full.png in Resources */,
 				09961C041D019F6700B1AE08 /* playlisticon@2x.png in Resources */,
 				09AD14ED1C8DCD0F0089B204 /* ClockViewController.xib in Resources */,
 				4A05E4861B5A2865000E7305 /* stopbutton@2x.png in Resources */,
