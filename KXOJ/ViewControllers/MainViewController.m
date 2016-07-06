@@ -117,6 +117,7 @@
     
     if ([reachability isReachable]) {
         NSLog(@"Reachable");
+        // First, we check that radio was played before and should play again
         if (shouldPlay) {
             [self reloadRadioStreaming];
         }
@@ -222,22 +223,27 @@
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
 }
 
+/**
+ *  NSNotification observer for AVAudioSession
+ *  Stops playback on phonecall, resumes if needed
+ *
+ *  @param notification received notofocation
+ */
 - (void)interruption:(NSNotification *)notification {
-    NSDictionary *interuptionDict = notification.userInfo;
-    NSUInteger interuptionType = (NSUInteger)[interuptionDict valueForKey:AVAudioSessionInterruptionTypeKey];
-    
-    if (interuptionType == AVAudioSessionInterruptionTypeBegan) {
-        [self beginInterruption];
+    //Check the type of notification
+    NSLog(@"Interruption notification name %@", notification.name);
+    if ([notification.name isEqualToString:AVAudioSessionInterruptionNotification]) {
+        NSLog(@"Interruption notification received %@!", notification);
+        //Check to see if it was a Begin interruption
+        if ([[notification.userInfo valueForKey:AVAudioSessionInterruptionTypeKey] isEqualToNumber:[NSNumber numberWithInt:AVAudioSessionInterruptionTypeBegan]]) {
+            [self pauseRadio];
+        } else if ([[notification.userInfo valueForKey:AVAudioSessionInterruptionTypeKey] isEqualToNumber:[NSNumber numberWithInt:AVAudioSessionInterruptionTypeEnded]]){
+            // Resume playing if needed
+            if (shouldPlay) {
+                [self playRadio];
+            }
+        }
     }
-#if __CC_PLATFORM_IOS >= 40000
-    else if (interuptionType == AVAudioSessionInterruptionTypeEnded) {
-        [self endInterruptionWithFlags:(NSUInteger)[interuptionDict valueForKey:AVAudioSessionInterruptionOptionKey]];
-    }
-#else
-    else if (interuptionType == AVAudioSessionInterruptionTypeEnded) {
-        [self endInterruption];
-    }
-#endif
 }
 
 #pragma mark - Get Feed Content
