@@ -51,8 +51,8 @@
 		4A05E42E1B5A2865000E7305 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E38B1B5A2865000E7305 /* MainWindow.xib */; };
 		4A05E4321B5A2865000E7305 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E3951B5A2865000E7305 /* AppDelegate.m */; };
 		4A05E4341B5A2865000E7305 /* iframe.html in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E3A41B5A2865000E7305 /* iframe.html */; };
-		4A05E43A1B5A2865000E7305 /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E3AB1B5A2865000E7305 /* alarm.png */; };
-		4A05E43B1B5A2865000E7305 /* alarm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E3AC1B5A2865000E7305 /* alarm@2x.png */; };
+		4A05E43A1B5A2865000E7305 /* icon_alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E3AB1B5A2865000E7305 /* icon_alarm.png */; };
+		4A05E43B1B5A2865000E7305 /* icon_alarm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E3AC1B5A2865000E7305 /* icon_alarm@2x.png */; };
 		4A05E4491B5A2865000E7305 /* call.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E3BA1B5A2865000E7305 /* call.png */; };
 		4A05E44A1B5A2865000E7305 /* call@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E3BB1B5A2865000E7305 /* call@2x.png */; };
 		4A05E4511B5A2865000E7305 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E3C21B5A2865000E7305 /* email.png */; };
@@ -168,8 +168,8 @@
 		4A05E3941B5A2865000E7305 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A05E3951B5A2865000E7305 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4A05E3A41B5A2865000E7305 /* iframe.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = iframe.html; sourceTree = "<group>"; };
-		4A05E3AB1B5A2865000E7305 /* alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm.png; sourceTree = "<group>"; };
-		4A05E3AC1B5A2865000E7305 /* alarm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm@2x.png"; sourceTree = "<group>"; };
+		4A05E3AB1B5A2865000E7305 /* icon_alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_alarm.png; sourceTree = "<group>"; };
+		4A05E3AC1B5A2865000E7305 /* icon_alarm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_alarm@2x.png"; sourceTree = "<group>"; };
 		4A05E3BA1B5A2865000E7305 /* call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = call.png; sourceTree = "<group>"; };
 		4A05E3BB1B5A2865000E7305 /* call@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call@2x.png"; sourceTree = "<group>"; };
 		4A05E3C21B5A2865000E7305 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
@@ -309,8 +309,8 @@
 				4A05E3E01B5A2865000E7305 /* icon_radio@2x.png */,
 				099079631BB84A6400A7F158 /* icon_web.png */,
 				099079641BB84A6400A7F158 /* icon_web@2x.png */,
-				4A05E3AB1B5A2865000E7305 /* alarm.png */,
-				4A05E3AC1B5A2865000E7305 /* alarm@2x.png */,
+				4A05E3AB1B5A2865000E7305 /* icon_alarm.png */,
+				4A05E3AC1B5A2865000E7305 /* icon_alarm@2x.png */,
 				4A05E3ED1B5A2865000E7305 /* icon_social.png */,
 				4A05E3EE1B5A2865000E7305 /* icon_social@2x.png */,
 				09AD14FE1C8DF89E0089B204 /* icon_shoutout.png */,
@@ -654,7 +654,7 @@
 				4A05E4341B5A2865000E7305 /* iframe.html in Resources */,
 				0910830B1D001D790088C319 /* ic_calendar.png in Resources */,
 				C5DBF9271B6B919500DA07C8 /* instagramicon.png in Resources */,
-				4A05E43A1B5A2865000E7305 /* alarm.png in Resources */,
+				4A05E43A1B5A2865000E7305 /* icon_alarm.png in Resources */,
 				090C8EB11D2F97FD00DB3CBA /* reload_new.png in Resources */,
 				4A05E4771B5A2865000E7305 /* samplebutton@2x.png in Resources */,
 				4A05E4831B5A2865000E7305 /* Stop.png in Resources */,
@@ -687,7 +687,7 @@
 				091083131D00256F0088C319 /* btn_set_alarm.png in Resources */,
 				09CA0B8C1D0123B7006AFFCD /* RecentSongViewController.xib in Resources */,
 				090C8EAF1D2F97FD00DB3CBA /* arrow_left.png in Resources */,
-				4A05E43B1B5A2865000E7305 /* alarm@2x.png in Resources */,
+				4A05E43B1B5A2865000E7305 /* icon_alarm@2x.png in Resources */,
 				4A05E4711B5A2865000E7305 /* recordbutton@2x.png in Resources */,
 				09717FA91D0009E600B992CF /* bg_radio_page.png in Resources */,
 				4A05E4551B5A2865000E7305 /* hourbg.png in Resources */,

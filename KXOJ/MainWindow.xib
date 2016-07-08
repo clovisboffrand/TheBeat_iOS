@@ -40,138 +40,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.078431372550000003" green="0.1764705882" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
-                    <viewControllers>
-                        <viewController id="155" userLabel="Wake Up to Bristol Beat" customClass="AlarmViewController">
-                            <view key="view" contentMode="scaleToFill" id="467">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new-app-background.jpg" id="IHp-7B-OtV">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Current Time" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="472">
-                                        <rect key="frame" x="16" y="25" width="278" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Set Wake Up Time" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="471">
-                                        <rect key="frame" x="70" y="135" width="180" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="473">
-                                        <rect key="frame" x="70" y="79" width="37" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
-                                        <color key="textColor" red="0.074509803921568626" green="0.0039215686274509803" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hourbg.png" id="481" userLabel="Image View">
-                                        <rect key="frame" x="70" y="79" width="37" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="477">
-                                        <rect key="frame" x="108" y="79" width="37" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
-                                        <color key="textColor" red="0.074509803921568626" green="0.0039215686274509803" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hourbg.png" id="480" userLabel="Image View">
-                                        <rect key="frame" x="108" y="79" width="37" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=":" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="479">
-                                        <rect key="frame" x="149" y="79" width="22" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
-                                        <color key="textColor" red="0.074509803921568626" green="0.0039215686274509803" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hourbg.png" id="483" userLabel="Image View">
-                                        <rect key="frame" x="149" y="79" width="22" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="476" userLabel="Lblmin1">
-                                        <rect key="frame" x="175" y="79" width="37" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
-                                        <color key="textColor" red="0.074509803921568626" green="0.0039215686274509803" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hourbg.png" id="478" userLabel="Image View">
-                                        <rect key="frame" x="175" y="79" width="37" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="475">
-                                        <rect key="frame" x="213" y="79" width="37" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
-                                        <color key="textColor" red="0.074509803921568626" green="0.0039215686274509803" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hourbg.png" id="482" userLabel="Image View">
-                                        <rect key="frame" x="213" y="79" width="37" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <pickerView contentMode="scaleToFill" id="470">
-                                        <rect key="frame" x="11" y="175" width="289" height="162"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <outlet property="dataSource" destination="155" id="485"/>
-                                            <outlet property="delegate" destination="155" id="486"/>
-                                        </connections>
-                                    </pickerView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="center" id="469">
-                                        <rect key="frame" x="4" y="331" width="313" height="69"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <string key="text">After setting the time on this screen, change the volume as desired then press the set alarm button. You must leave the app open for the alarm to work.</string>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="468">
-                                        <rect key="frame" x="44" y="408" width="232" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <state key="normal" title="Set Alarm" backgroundImage="btn_set_alarm.png">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="handleBtn:" destination="155" eventType="touchUpInside" id="495"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <extendedEdge key="edgesForExtendedLayout"/>
-                            <navigationItem key="navigationItem" title="Wake Up to Bristol Beat" id="Aka-DB-HDx" userLabel="Wake Up to Bristol Beat"/>
-                            <connections>
-                                <outlet property="btnSet" destination="468" id="487"/>
-                                <outlet property="datePicker" destination="470" id="VwN-8k-WK5"/>
-                                <outlet property="lblMid" destination="479" id="eG7-0c-v3f"/>
-                                <outlet property="lblhour1" destination="473" id="EQH-VD-WJL"/>
-                                <outlet property="lblhour2" destination="477" id="490"/>
-                                <outlet property="lblmin1" destination="476" id="ChO-uP-Tc0"/>
-                                <outlet property="lblmin2" destination="475" id="492"/>
-                            </connections>
-                        </viewController>
-                    </viewControllers>
                 </navigationController>
                 <navigationController definesPresentationContext="YES" id="HYC-6T-P9t" userLabel="Social">
                     <tabBarItem key="tabBarItem" title="Social" image="icon_social.png" id="mOS-Po-h3u" userLabel="Social"/>
@@ -490,11 +358,9 @@
     </objects>
     <resources>
         <image name="alarm.png" width="30" height="30"/>
-        <image name="btn_set_alarm.png" width="552" height="88"/>
         <image name="call.png" width="64" height="64"/>
         <image name="email.png" width="64" height="64"/>
         <image name="facebook.png" width="64" height="64"/>
-        <image name="hourbg.png" width="78" height="98"/>
         <image name="ic_building.png" width="64" height="64"/>
         <image name="ic_calendar.png" width="64" height="64"/>
         <image name="ic_trophy.png" width="64" height="64"/>

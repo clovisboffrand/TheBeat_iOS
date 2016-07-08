@@ -15,7 +15,6 @@
     IBOutlet UILabel *lblhour2;
     IBOutlet UILabel *lblmin1;
     IBOutlet UILabel *lblmin2;
-    IBOutlet UILabel *lblMid;
     IBOutlet UIButton *btnSet;
     IBOutlet UIPickerView *datePicker;
 }
