@@ -32,7 +32,6 @@
 		09AD14E01C8DB7A00089B204 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14DF1C8DB7A00089B204 /* WebViewController.m */; };
 		09AD14E31C8DBD110089B204 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14E21C8DBD110089B204 /* AlarmViewController.m */; };
 		09AD14EC1C8DCD0F0089B204 /* ClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14EA1C8DCD0F0089B204 /* ClockViewController.m */; };
-		09AD14ED1C8DCD0F0089B204 /* ClockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09AD14EB1C8DCD0F0089B204 /* ClockViewController.xib */; };
 		09AD14F11C8DCFD50089B204 /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14F01C8DCFD50089B204 /* SocialViewController.m */; };
 		09AD14F51C8DE08F0089B204 /* SocialPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14F31C8DE08F0089B204 /* SocialPageViewController.m */; };
 		09AD14FA1C8DEE0F0089B204 /* ShoutOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14F91C8DEE0F0089B204 /* ShoutOutViewController.m */; };
@@ -138,7 +137,6 @@
 		09AD14E21C8DBD110089B204 /* AlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
 		09AD14E91C8DCD0F0089B204 /* ClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockViewController.h; sourceTree = "<group>"; };
 		09AD14EA1C8DCD0F0089B204 /* ClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockViewController.m; sourceTree = "<group>"; };
-		09AD14EB1C8DCD0F0089B204 /* ClockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClockViewController.xib; sourceTree = "<group>"; };
 		09AD14EF1C8DCFD50089B204 /* SocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialViewController.h; sourceTree = "<group>"; };
 		09AD14F01C8DCFD50089B204 /* SocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialViewController.m; sourceTree = "<group>"; };
 		09AD14F21C8DE08F0089B204 /* SocialPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialPageViewController.h; sourceTree = "<group>"; };
@@ -382,7 +380,6 @@
 				09AD14E21C8DBD110089B204 /* AlarmViewController.m */,
 				09AD14E91C8DCD0F0089B204 /* ClockViewController.h */,
 				09AD14EA1C8DCD0F0089B204 /* ClockViewController.m */,
-				09AD14EB1C8DCD0F0089B204 /* ClockViewController.xib */,
 			);
 			name = AlarmModule;
 			sourceTree = "<group>";
@@ -653,7 +650,6 @@
 				4A05E4881B5A2865000E7305 /* twitter.png in Resources */,
 				0986B3761D20ADF10057C34C /* img_logo_full.png in Resources */,
 				09961C041D019F6700B1AE08 /* playlisticon@2x.png in Resources */,
-				09AD14ED1C8DCD0F0089B204 /* ClockViewController.xib in Resources */,
 				4A05E4861B5A2865000E7305 /* stopbutton@2x.png in Resources */,
 				4A05E4891B5A2865000E7305 /* twitter@2x.png in Resources */,
 				4A05E46E1B5A2865000E7305 /* icon_radio.png in Resources */,

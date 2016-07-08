@@ -779,6 +779,103 @@
             </objects>
             <point key="canvasLocation" x="1671" y="683"/>
         </scene>
+        <!--Clock View Controller-->
+        <scene sceneID="4hI-a3-Zuz">
+            <objects>
+                <viewController storyboardIdentifier="ClockViewController" id="nrv-pW-5AY" customClass="ClockViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9W3-WA-3hv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xft-cT-ciw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2f6-i9-wG9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gW-jE-tGa">
+                                <rect key="frame" x="160" y="59" width="280" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="gYS-Nt-Xr1"/>
+                                    <constraint firstAttribute="height" constant="47" id="slf-Fv-D9E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGx-j1-QXw">
+                                <rect key="frame" x="36" y="114" width="528" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="Czz-fa-BuU"/>
+                                    <constraint firstAttribute="width" constant="528" id="LAz-Cd-zAA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkY-q6-iBL">
+                                <rect key="frame" x="36" y="232" width="102" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1A3-sX-GF3"/>
+                                    <constraint firstAttribute="width" constant="102" id="obj-U2-tW2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Radio On/Off">
+                                    <color key="titleColor" red="0.95294117649999999" green="0.45098039220000002" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doPlayPause:" destination="nrv-pW-5AY" eventType="touchUpInside" id="Iay-Uj-wm0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJQ-Yt-bO6">
+                                <rect key="frame" x="507" y="232" width="73" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="2rA-OH-sGy"/>
+                                    <constraint firstAttribute="height" constant="44" id="GQ1-Bj-92X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.95294117649999999" green="0.45098039220000002" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doBack:" destination="nrv-pW-5AY" eventType="touchUpInside" id="gwN-H0-TLM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j37-Bl-tn5">
+                                <rect key="frame" x="193" y="238" width="214" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="214" id="3bE-xi-UmL"/>
+                                    <constraint firstAttribute="height" constant="32" id="Hid-NS-k5x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XkY-q6-iBL" firstAttribute="top" secondItem="EGx-j1-QXw" secondAttribute="bottom" constant="31" id="2Yh-bO-qj5"/>
+                            <constraint firstItem="EGx-j1-QXw" firstAttribute="centerX" secondItem="2f6-i9-wG9" secondAttribute="centerX" id="7cd-i0-oOU"/>
+                            <constraint firstItem="LJQ-Yt-bO6" firstAttribute="top" secondItem="EGx-j1-QXw" secondAttribute="bottom" constant="31" id="LoI-Qo-ipc"/>
+                            <constraint firstItem="j37-Bl-tn5" firstAttribute="centerX" secondItem="2f6-i9-wG9" secondAttribute="centerX" id="Q6g-Y4-tJ9"/>
+                            <constraint firstItem="j37-Bl-tn5" firstAttribute="leading" secondItem="XkY-q6-iBL" secondAttribute="trailing" constant="55" id="QWh-Nc-EYX"/>
+                            <constraint firstItem="1gW-jE-tGa" firstAttribute="centerX" secondItem="2f6-i9-wG9" secondAttribute="centerX" id="TUk-aS-mdg"/>
+                            <constraint firstItem="1gW-jE-tGa" firstAttribute="top" secondItem="9W3-WA-3hv" secondAttribute="bottom" constant="39" id="ZUg-rY-IQK"/>
+                            <constraint firstItem="j37-Bl-tn5" firstAttribute="top" secondItem="EGx-j1-QXw" secondAttribute="bottom" constant="37" id="l1M-0r-oaE"/>
+                            <constraint firstItem="EGx-j1-QXw" firstAttribute="top" secondItem="1gW-jE-tGa" secondAttribute="bottom" constant="8" id="n7f-Qr-gdo"/>
+                            <constraint firstItem="LJQ-Yt-bO6" firstAttribute="leading" secondItem="j37-Bl-tn5" secondAttribute="trailing" constant="100" id="rLw-gb-TxW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblAlarm" destination="j37-Bl-tn5" id="TOC-aQ-Cm7"/>
+                        <outlet property="lblDate" destination="1gW-jE-tGa" id="Sa3-we-ACh"/>
+                        <outlet property="lblTime" destination="EGx-j1-QXw" id="WQu-79-N6U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3zx-6Z-MXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="1382"/>
+        </scene>
         <!--Social Page View Controller-->
         <scene sceneID="d8r-dF-EuF">
             <objects>
