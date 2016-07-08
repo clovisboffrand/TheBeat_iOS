@@ -174,7 +174,7 @@
 }
 
 - (IBAction)didTapGoRecent:(id)sender {
-    RecentSongViewController *viewController = [[RecentSongViewController alloc] init];
+    RecentSongViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RecentSongViewController"];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
     [navController.navigationBar custom];
     [self presentViewController:navController animated:YES completion:nil];
