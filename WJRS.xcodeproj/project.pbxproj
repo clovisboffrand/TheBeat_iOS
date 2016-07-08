@@ -43,7 +43,7 @@
 		4A05E42D1B5A2865000E7305 /* CommonHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E38A1B5A2865000E7305 /* CommonHelpers.m */; };
 		4A05E42E1B5A2865000E7305 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E38B1B5A2865000E7305 /* MainWindow.xib */; };
 		4A05E42F1B5A2865000E7305 /* MyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E38D1B5A2865000E7305 /* MyWindow.m */; };
-		4A05E4321B5A2865000E7305 /* Radio99AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E3951B5A2865000E7305 /* Radio99AppDelegate.m */; };
+		4A05E4321B5A2865000E7305 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E3951B5A2865000E7305 /* AppDelegate.m */; };
 		4A05E4341B5A2865000E7305 /* iframe.html in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E3A41B5A2865000E7305 /* iframe.html */; };
 		4A05E43A1B5A2865000E7305 /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E3AB1B5A2865000E7305 /* alarm.png */; };
 		4A05E43B1B5A2865000E7305 /* alarm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E3AC1B5A2865000E7305 /* alarm@2x.png */; };
@@ -160,8 +160,8 @@
 		4A05E38B1B5A2865000E7305 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		4A05E38C1B5A2865000E7305 /* MyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWindow.h; sourceTree = "<group>"; };
 		4A05E38D1B5A2865000E7305 /* MyWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWindow.m; sourceTree = "<group>"; };
-		4A05E3941B5A2865000E7305 /* Radio99AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Radio99AppDelegate.h; sourceTree = "<group>"; };
-		4A05E3951B5A2865000E7305 /* Radio99AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Radio99AppDelegate.m; sourceTree = "<group>"; };
+		4A05E3941B5A2865000E7305 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4A05E3951B5A2865000E7305 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4A05E3A41B5A2865000E7305 /* iframe.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = iframe.html; sourceTree = "<group>"; };
 		4A05E3AB1B5A2865000E7305 /* alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm.png; sourceTree = "<group>"; };
 		4A05E3AC1B5A2865000E7305 /* alarm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm@2x.png"; sourceTree = "<group>"; };
@@ -487,8 +487,8 @@
 				4A05E38B1B5A2865000E7305 /* MainWindow.xib */,
 				4A05E38C1B5A2865000E7305 /* MyWindow.h */,
 				4A05E38D1B5A2865000E7305 /* MyWindow.m */,
-				4A05E3941B5A2865000E7305 /* Radio99AppDelegate.h */,
-				4A05E3951B5A2865000E7305 /* Radio99AppDelegate.m */,
+				4A05E3941B5A2865000E7305 /* AppDelegate.h */,
+				4A05E3951B5A2865000E7305 /* AppDelegate.m */,
 			);
 			name = WJRS;
 			path = KXOJ;
@@ -774,7 +774,7 @@
 				09AD14F51C8DE08F0089B204 /* SocialPageViewController.m in Sources */,
 				4A05E4DD1B5AC47B000E7305 /* NavigationBarCustom.m in Sources */,
 				09CA0B8B1D0123B7006AFFCD /* RecentSongViewController.m in Sources */,
-				4A05E4321B5A2865000E7305 /* Radio99AppDelegate.m in Sources */,
+				4A05E4321B5A2865000E7305 /* AppDelegate.m in Sources */,
 				09AD14EC1C8DCD0F0089B204 /* ClockViewController.m in Sources */,
 				0996D3E21D0F0538004BB622 /* Reachability.m in Sources */,
 				4A05E4AA1B5A290A000E7305 /* main.m in Sources */,

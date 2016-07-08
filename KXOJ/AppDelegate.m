@@ -1,18 +1,15 @@
 //
-//  radio99AppDelegate.m
+//  Radio99AppDelegate.m
 //  iRadio
 //
 //  Created by ben on 10/05/11.
 //  Copyright 2011 Ingravitymedia.com. All rights reserved.
 //
 
-#import "Radio99AppDelegate.h"
+#import "AppDelegate.h"
 #import "Header.h"
 
-@implementation Radio99AppDelegate
-
-@synthesize window;
-@synthesize tabBarController;
+@implementation AppDelegate
 
 #pragma mark - Application lifecycle
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -24,10 +21,10 @@
     
     // Battery monitor
     [self registerForBatteryStateChanges];
+    
     // Force updates at first time
     [self batteryStateDidChange];
     
-    self.tabBarController.delegate = self;
     self.tabBarController.tabBar.tintColor = UIColorFromString(TINT_DEF_COLR, 1);
     
     self.window.rootViewController = self.tabBarController;
@@ -36,13 +33,7 @@
     return YES;
 }
 
-#pragma mark - UITabBarControllerDelegate methods
-
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
-    
-}
-
-#pragma mark -
+#pragma mark - Battery Status Monitor
 
 - (void)registerForBatteryStateChanges {
     [[UIDevice currentDevice] setBatteryMonitoringEnabled:YES];
