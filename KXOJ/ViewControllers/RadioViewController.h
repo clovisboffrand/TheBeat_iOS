@@ -1,5 +1,5 @@
 //
-//  MainViewController.h
+//  RadioViewController.h
 //  radio99
 //
 //  Created by ben on 10/05/11.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+@interface RadioViewController : UIViewController
 
 @end

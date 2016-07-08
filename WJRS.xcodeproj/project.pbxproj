@@ -14,6 +14,7 @@
 		091083151D00275A0088C319 /* shoutoutimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 091083141D00275A0088C319 /* shoutoutimage.png */; };
 		0931A1FA1D02716E006A20D1 /* img_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0931A1F91D02716E006A20D1 /* img_logo.png */; };
 		09717FA91D0009E600B992CF /* bg_radio_page.png in Resources */ = {isa = PBXBuildFile; fileRef = 09717FA81D0009E600B992CF /* bg_radio_page.png */; };
+		098182F31D2F48FB003BBE5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098182F21D2F48FB003BBE5E /* Main.storyboard */; };
 		0986B3761D20ADF10057C34C /* img_logo_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 0986B3751D20ADF10057C34C /* img_logo_full.png */; };
 		099079651BB84A6400A7F158 /* icon_web.png in Resources */ = {isa = PBXBuildFile; fileRef = 099079631BB84A6400A7F158 /* icon_web.png */; };
 		099079661BB84A6400A7F158 /* icon_web@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 099079641BB84A6400A7F158 /* icon_web@2x.png */; };
@@ -86,7 +87,7 @@
 		4A05E48C1B5A2865000E7305 /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E3FD1B5A2865000E7305 /* youtube.png */; };
 		4A05E48D1B5A2865000E7305 /* youtube@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E3FE1B5A2865000E7305 /* youtube@2x.png */; };
 		4A05E48E1B5A2865000E7305 /* new-app-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E4001B5A2865000E7305 /* new-app-background.jpg */; };
-		4A05E4981B5A2865000E7305 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4121B5A2865000E7305 /* MainViewController.m */; };
+		4A05E4981B5A2865000E7305 /* RadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4121B5A2865000E7305 /* RadioViewController.m */; };
 		4A05E4AA1B5A290A000E7305 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4A91B5A290A000E7305 /* main.m */; };
 		4A05E4C51B5A3108000E7305 /* XMLConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4C21B5A3108000E7305 /* XMLConverter.m */; };
 		4A05E4C61B5A3108000E7305 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E4C41B5A3108000E7305 /* XMLDictionary.m */; };
@@ -117,6 +118,7 @@
 		0931A1F91D02716E006A20D1 /* img_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_logo.png; sourceTree = "<group>"; };
 		093C3AEC1BB8797500E72B1B /* WJRS_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WJRS_Prefix.pch; sourceTree = "<group>"; };
 		09717FA81D0009E600B992CF /* bg_radio_page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_radio_page.png; sourceTree = "<group>"; };
+		098182F21D2F48FB003BBE5E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0986B3751D20ADF10057C34C /* img_logo_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_logo_full.png; sourceTree = "<group>"; };
 		099079631BB84A6400A7F158 /* icon_web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_web.png; sourceTree = "<group>"; };
 		099079641BB84A6400A7F158 /* icon_web@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_web@2x.png"; sourceTree = "<group>"; };
@@ -202,8 +204,8 @@
 		4A05E3FD1B5A2865000E7305 /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
 		4A05E3FE1B5A2865000E7305 /* youtube@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "youtube@2x.png"; sourceTree = "<group>"; };
 		4A05E4001B5A2865000E7305 /* new-app-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "new-app-background.jpg"; path = "../slide/new-app-background.jpg"; sourceTree = "<group>"; };
-		4A05E4111B5A2865000E7305 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		4A05E4121B5A2865000E7305 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4A05E4111B5A2865000E7305 /* RadioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioViewController.h; sourceTree = "<group>"; };
+		4A05E4121B5A2865000E7305 /* RadioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioViewController.m; sourceTree = "<group>"; };
 		4A05E4A91B5A290A000E7305 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = KXOJ/main.m; sourceTree = "<group>"; };
 		4A05E4AB1B5A2923000E7305 /* WJRS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "WJRS-Info.plist"; path = "KXOJ/WJRS-Info.plist"; sourceTree = "<group>"; };
 		4A05E4B41B5A30BF000E7305 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
@@ -359,11 +361,11 @@
 			name = ShoutOutTab;
 			sourceTree = "<group>";
 		};
-		09AD14E41C8DC9E20089B204 /* MainModule */ = {
+		09AD14E41C8DC9E20089B204 /* RadioModule */ = {
 			isa = PBXGroup;
 			children = (
-				4A05E4111B5A2865000E7305 /* MainViewController.h */,
-				4A05E4121B5A2865000E7305 /* MainViewController.m */,
+				4A05E4111B5A2865000E7305 /* RadioViewController.h */,
+				4A05E4121B5A2865000E7305 /* RadioViewController.m */,
 				09CA0B881D0123B7006AFFCD /* RecentSongViewController.h */,
 				09CA0B891D0123B7006AFFCD /* RecentSongViewController.m */,
 				09CA0B8A1D0123B7006AFFCD /* RecentSongViewController.xib */,
@@ -371,7 +373,7 @@
 				09961BFD1D0197D400B1AE08 /* PlaylistCell.m */,
 				09961BFE1D0197D400B1AE08 /* PlaylistCell.xib */,
 			);
-			name = MainModule;
+			name = RadioModule;
 			sourceTree = "<group>";
 		};
 		09AD14E51C8DC9EF0089B204 /* EventsModule */ = {
@@ -484,6 +486,7 @@
 				4A05E38B1B5A2865000E7305 /* MainWindow.xib */,
 				4A05E3941B5A2865000E7305 /* AppDelegate.h */,
 				4A05E3951B5A2865000E7305 /* AppDelegate.m */,
+				098182F21D2F48FB003BBE5E /* Main.storyboard */,
 			);
 			name = WJRS;
 			path = KXOJ;
@@ -541,7 +544,7 @@
 		4A05E4011B5A2865000E7305 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				09AD14E41C8DC9E20089B204 /* MainModule */,
+				09AD14E41C8DC9E20089B204 /* RadioModule */,
 				09AD14E51C8DC9EF0089B204 /* EventsModule */,
 				09AD14E61C8DCA000089B204 /* AlarmModule */,
 				09AD14EE1C8DCFC70089B204 /* SocialModule */,
@@ -633,6 +636,7 @@
 				4A05E48B1B5A2865000E7305 /* website@2x.png in Resources */,
 				0910830A1D001D790088C319 /* ic_building.png in Resources */,
 				4A05E4741B5A2865000E7305 /* reload_new.png in Resources */,
+				098182F31D2F48FB003BBE5E /* Main.storyboard in Resources */,
 				099079651BB84A6400A7F158 /* icon_web.png in Resources */,
 				4A05E4601B5A2865000E7305 /* listenbutton@2x.png in Resources */,
 				4A05E47B1B5A2865000E7305 /* sms@2x.png in Resources */,
@@ -762,7 +766,7 @@
 				4A05E4C51B5A3108000E7305 /* XMLConverter.m in Sources */,
 				09961BFF1D0197D400B1AE08 /* PlaylistCell.m in Sources */,
 				09AD14F11C8DCFD50089B204 /* SocialViewController.m in Sources */,
-				4A05E4981B5A2865000E7305 /* MainViewController.m in Sources */,
+				4A05E4981B5A2865000E7305 /* RadioViewController.m in Sources */,
 				09AD14E01C8DB7A00089B204 /* WebViewController.m in Sources */,
 				4A05E42D1B5A2865000E7305 /* CommonHelpers.m in Sources */,
 				09AD14F51C8DE08F0089B204 /* SocialPageViewController.m in Sources */,
@@ -786,8 +790,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Bob Thornton (4U354C9X5S)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bob Thornton (4U354C9X5S)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Petro Rington (5UKQVUWDZ6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Petro Rington (5UKQVUWDZ6)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -799,10 +803,10 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.RadioserversLLC.bristolbeat;
 				PRODUCT_NAME = "Bristol Beat";
-				PROVISIONING_PROFILE = "4cca1975-f921-4b04-9664-62b2f26d3223";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4cca1975-f921-4b04-9664-62b2f26d3223";
+				PROVISIONING_PROFILE = "0e08c94d-78f5-42ee-8d32-0912901a0260";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0e08c94d-78f5-42ee-8d32-0912901a0260";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -833,7 +837,7 @@
 				"PROVISIONING_PROFILE[sdk=*]" = "3f61599e-7f1e-4090-9215-63bbe8e78e93";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3f61599e-7f1e-4090-9215-63bbe8e78e93";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
