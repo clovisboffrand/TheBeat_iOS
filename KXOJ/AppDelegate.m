@@ -30,6 +30,13 @@
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     
+    // Begin receiving the remote control events.
+    UIDevice *device = [UIDevice currentDevice];
+    if ([device respondsToSelector:@selector(isMultitaskingSupported)]) {
+        [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+        [self becomeFirstResponder];
+    }
+    
     return YES;
 }
 
@@ -54,6 +61,34 @@
         [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     } else {
         [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
+    }
+}
+
+#pragma mark - Remote Control Events
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    if (event.type == UIEventTypeRemoteControl)	{
+        switch(event.subtype)		{
+            case UIEventSubtypeRemoteControlPlay:
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"TogglePlayPause" object:nil];
+                break;
+            case UIEventSubtypeRemoteControlPause:
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"TogglePlayPause" object:nil];
+                break;
+            case UIEventSubtypeRemoteControlStop:
+                break;
+            case UIEventSubtypeRemoteControlTogglePlayPause:
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"TogglePlayPause" object:nil];
+                break;
+            case UIEventSubtypeRemoteControlNextTrack:
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"NextTrack" object:nil];
+                break;
+            case UIEventSubtypeRemoteControlPreviousTrack:
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"PreviousTrack" object:nil];
+                break;
+            default:
+                return;
+        }
     }
 }
 

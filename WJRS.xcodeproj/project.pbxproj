@@ -42,7 +42,6 @@
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		4A05E42D1B5A2865000E7305 /* CommonHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E38A1B5A2865000E7305 /* CommonHelpers.m */; };
 		4A05E42E1B5A2865000E7305 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E38B1B5A2865000E7305 /* MainWindow.xib */; };
-		4A05E42F1B5A2865000E7305 /* MyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E38D1B5A2865000E7305 /* MyWindow.m */; };
 		4A05E4321B5A2865000E7305 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A05E3951B5A2865000E7305 /* AppDelegate.m */; };
 		4A05E4341B5A2865000E7305 /* iframe.html in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E3A41B5A2865000E7305 /* iframe.html */; };
 		4A05E43A1B5A2865000E7305 /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A05E3AB1B5A2865000E7305 /* alarm.png */; };
@@ -158,8 +157,6 @@
 		4A05E3891B5A2865000E7305 /* CommonHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHelpers.h; sourceTree = "<group>"; };
 		4A05E38A1B5A2865000E7305 /* CommonHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonHelpers.m; sourceTree = "<group>"; };
 		4A05E38B1B5A2865000E7305 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		4A05E38C1B5A2865000E7305 /* MyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWindow.h; sourceTree = "<group>"; };
-		4A05E38D1B5A2865000E7305 /* MyWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWindow.m; sourceTree = "<group>"; };
 		4A05E3941B5A2865000E7305 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A05E3951B5A2865000E7305 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4A05E3A41B5A2865000E7305 /* iframe.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = iframe.html; sourceTree = "<group>"; };
@@ -485,8 +482,6 @@
 				4A05E3881B5A2865000E7305 /* Commons */,
 				4A05E4011B5A2865000E7305 /* ViewControllers */,
 				4A05E38B1B5A2865000E7305 /* MainWindow.xib */,
-				4A05E38C1B5A2865000E7305 /* MyWindow.h */,
-				4A05E38D1B5A2865000E7305 /* MyWindow.m */,
 				4A05E3941B5A2865000E7305 /* AppDelegate.h */,
 				4A05E3951B5A2865000E7305 /* AppDelegate.m */,
 			);
@@ -763,7 +758,6 @@
 				09AD14FA1C8DEE0F0089B204 /* ShoutOutViewController.m in Sources */,
 				09AD14E31C8DBD110089B204 /* AlarmViewController.m in Sources */,
 				4A05E4C61B5A3108000E7305 /* XMLDictionary.m in Sources */,
-				4A05E42F1B5A2865000E7305 /* MyWindow.m in Sources */,
 				09961BF81D01933B00B1AE08 /* NSString+HTML.m in Sources */,
 				4A05E4C51B5A3108000E7305 /* XMLConverter.m in Sources */,
 				09961BFF1D0197D400B1AE08 /* PlaylistCell.m in Sources */,
