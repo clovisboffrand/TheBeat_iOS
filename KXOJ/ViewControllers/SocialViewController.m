@@ -58,7 +58,7 @@
 #pragma mark - Button Action Methods
 
 - (IBAction)didTapSocialButton:(UIButton *)button {
-    SocialPageViewController *viewController = [[SocialPageViewController alloc] initWithNibName:@"SocialPageViewController" bundle:[NSBundle mainBundle]];
+    SocialPageViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SocialPageViewController"];
     switch (button.tag) {
         case 1:
             viewController.title = @"Facebook";

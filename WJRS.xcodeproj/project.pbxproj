@@ -35,7 +35,6 @@
 		09AD14ED1C8DCD0F0089B204 /* ClockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09AD14EB1C8DCD0F0089B204 /* ClockViewController.xib */; };
 		09AD14F11C8DCFD50089B204 /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14F01C8DCFD50089B204 /* SocialViewController.m */; };
 		09AD14F51C8DE08F0089B204 /* SocialPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14F31C8DE08F0089B204 /* SocialPageViewController.m */; };
-		09AD14F61C8DE08F0089B204 /* SocialPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09AD14F41C8DE08F0089B204 /* SocialPageViewController.xib */; };
 		09AD14FA1C8DEE0F0089B204 /* ShoutOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD14F91C8DEE0F0089B204 /* ShoutOutViewController.m */; };
 		09AD15001C8DF89E0089B204 /* icon_shoutout.png in Resources */ = {isa = PBXBuildFile; fileRef = 09AD14FE1C8DF89E0089B204 /* icon_shoutout.png */; };
 		09AD15011C8DF89E0089B204 /* icon_shoutout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09AD14FF1C8DF89E0089B204 /* icon_shoutout@2x.png */; };
@@ -144,7 +143,6 @@
 		09AD14F01C8DCFD50089B204 /* SocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialViewController.m; sourceTree = "<group>"; };
 		09AD14F21C8DE08F0089B204 /* SocialPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialPageViewController.h; sourceTree = "<group>"; };
 		09AD14F31C8DE08F0089B204 /* SocialPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialPageViewController.m; sourceTree = "<group>"; };
-		09AD14F41C8DE08F0089B204 /* SocialPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialPageViewController.xib; sourceTree = "<group>"; };
 		09AD14F81C8DEE0F0089B204 /* ShoutOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutOutViewController.h; sourceTree = "<group>"; };
 		09AD14F91C8DEE0F0089B204 /* ShoutOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutOutViewController.m; sourceTree = "<group>"; };
 		09AD14FE1C8DF89E0089B204 /* icon_shoutout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_shoutout.png; sourceTree = "<group>"; };
@@ -396,7 +394,6 @@
 				09AD14F01C8DCFD50089B204 /* SocialViewController.m */,
 				09AD14F21C8DE08F0089B204 /* SocialPageViewController.h */,
 				09AD14F31C8DE08F0089B204 /* SocialPageViewController.m */,
-				09AD14F41C8DE08F0089B204 /* SocialPageViewController.xib */,
 			);
 			name = SocialModule;
 			sourceTree = "<group>";
@@ -686,7 +683,6 @@
 				4A05E4E41B5AC97C000E7305 /* btn_back@2x.png in Resources */,
 				090C8EAA1D2F97BE00DB3CBA /* arrow_right@2x.png in Resources */,
 				4A4965261B5B7A4E00E4CF2D /* icn_chanel.png in Resources */,
-				09AD14F61C8DE08F0089B204 /* SocialPageViewController.xib in Resources */,
 				0910830C1D001D790088C319 /* ic_trophy.png in Resources */,
 				4A05E44A1B5A2865000E7305 /* call@2x.png in Resources */,
 			);

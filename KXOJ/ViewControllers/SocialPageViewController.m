@@ -56,7 +56,7 @@
 
 #pragma mark - Button Action Methods
 
-- (IBAction)didTapBackButton:(id)sender {
+- (void)didTapBackButton:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
