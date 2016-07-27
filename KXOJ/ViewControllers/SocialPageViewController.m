@@ -18,14 +18,6 @@
 
 @implementation SocialPageViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [CommonHelpers backBarButtonItemWithTarget:self action:@selector(didTapBackButton:)];
@@ -56,7 +48,7 @@
 
 #pragma mark - Button Action Methods
 
-- (IBAction)didTapBackButton:(id)sender {
+- (void)didTapBackButton:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 

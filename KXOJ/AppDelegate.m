@@ -1,5 +1,5 @@
 //
-//  Radio99AppDelegate.m
+//  AppDelegate.m
 //  iRadio
 //
 //  Created by ben on 10/05/11.
@@ -13,22 +13,12 @@
 
 #pragma mark - Application lifecycle
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    if (UIDeviceModelIsIphone4()) {
-        [[UIApplication sharedApplication] setStatusBarHidden:YES];
-    } else {
-        [[UIApplication sharedApplication] setStatusBarHidden:NO];
-    }
     
     // Battery monitor
     [self registerForBatteryStateChanges];
     
     // Force updates at first time
     [self batteryStateDidChange];
-    
-    self.tabBarController.tabBar.tintColor = UIColorFromString(TINT_DEF_COLR, 1);
-    
-    self.window.rootViewController = self.tabBarController;
-    [self.window makeKeyAndVisible];
     
     // Begin receiving the remote control events.
     UIDevice *device = [UIDevice currentDevice];

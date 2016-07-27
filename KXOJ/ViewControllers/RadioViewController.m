@@ -1,12 +1,12 @@
 //
-//  MainViewController.m
+//  RadioViewController.m
 //  iRadio
 //
 //  Created by ben on 10/05/11.
 //  Copyright 2011 Ingravitymedia.com. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "RadioViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <MediaPlayer/MediaPlayer.h>
@@ -16,7 +16,7 @@
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import "Reachability.h"
 
-@interface MainViewController() <UIWebViewDelegate, AVAudioSessionDelegate, NSXMLParserDelegate>
+@interface RadioViewController() <UIWebViewDelegate, AVAudioSessionDelegate, NSXMLParserDelegate>
 {
     IBOutlet UIWebView *_adWebView;
     IBOutlet UIView *volumeSlider;
@@ -32,7 +32,7 @@
 @end
 
 
-@implementation MainViewController
+@implementation RadioViewController
 {
     NSMutableArray *feeds;
     NSMutableDictionary *feeditem;
@@ -84,11 +84,6 @@
     
     // Add observer for reachability change.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityDidChange:) name:kReachabilityChangedNotification object:nil];
-    
-    // Add volume control.
-    MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame:volumeSlider.bounds];
-    [volumeSlider addSubview:volumeView];
-    [volumeView sizeToFit];
     
     // share instance for audio remote control
     // Registers this class as the delegate of the audio session.
@@ -179,7 +174,7 @@
 }
 
 - (IBAction)didTapGoRecent:(id)sender {
-    RecentSongViewController *viewController = [[RecentSongViewController alloc] init];
+    RecentSongViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RecentSongViewController"];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
     [navController.navigationBar custom];
     [self presentViewController:navController animated:YES completion:nil];

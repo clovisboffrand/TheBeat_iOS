@@ -15,7 +15,6 @@
     IBOutlet UILabel *lblhour2;
     IBOutlet UILabel *lblmin1;
     IBOutlet UILabel *lblmin2;
-    IBOutlet UILabel *lblMid;
     IBOutlet UIButton *btnSet;
     IBOutlet UIPickerView *datePicker;
 }
@@ -378,7 +377,7 @@
 #pragma mark - Go to Clock Page
 
 - (void)goClock {
-    ClockViewController *viewController = [[ClockViewController alloc] initWithNibName:@"ClockViewController" bundle:[NSBundle mainBundle]];
+    ClockViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ClockViewController"];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
