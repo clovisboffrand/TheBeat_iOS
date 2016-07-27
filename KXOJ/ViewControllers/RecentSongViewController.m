@@ -42,7 +42,6 @@
     self.arraysong = [NSMutableArray array];
     
     self.tblRecent.indicatorStyle = UIScrollViewIndicatorStyleWhite;
-    [self.tblRecent registerNib:[UINib nibWithNibName:@"PlaylistCell" bundle:nil] forCellReuseIdentifier:@"PlaylistCellStyle"];
     
     [self getSongList];
     [self setupTimer];
@@ -149,7 +148,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    PlaylistCell *cell = (PlaylistCell *)[tableView dequeueReusableCellWithIdentifier:@"PlaylistCellStyle" forIndexPath:indexPath];
+    PlaylistCell *cell = (PlaylistCell *)[tableView dequeueReusableCellWithIdentifier:@"PlaylistCell" forIndexPath:indexPath];
     NSDictionary *song = feeds[indexPath.row];
     [cell configureWithSong:song];
     return cell;

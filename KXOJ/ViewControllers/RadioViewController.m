@@ -1,12 +1,12 @@
 //
-//  MainViewController.m
+//  RadioViewController.m
 //  iRadio
 //
 //  Created by ben on 10/05/11.
 //  Copyright 2011 Ingravitymedia.com. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "RadioViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <MediaPlayer/MediaPlayer.h>
@@ -16,7 +16,7 @@
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import "Reachability.h"
 
-@interface MainViewController() <UIWebViewDelegate, AVAudioSessionDelegate, NSXMLParserDelegate>
+@interface RadioViewController() <UIWebViewDelegate, AVAudioSessionDelegate, NSXMLParserDelegate>
 {
     IBOutlet UIWebView *_adWebView;
     IBOutlet UIView *volumeSlider;
@@ -32,7 +32,7 @@
 @end
 
 
-@implementation MainViewController
+@implementation RadioViewController
 {
     NSMutableArray *feeds;
     NSMutableDictionary *feeditem;
@@ -44,10 +44,13 @@
     NSMutableString *pubDate;
     
     NSString *element;
+    BOOL shouldPlay; //variable indicates that playback should be enabled
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    shouldPlay = YES;
     
     [self reloadRadioStreaming];
     
@@ -82,11 +85,6 @@
     // Add observer for reachability change.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityDidChange:) name:kReachabilityChangedNotification object:nil];
     
-    // Add volume control.
-    MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame:volumeSlider.bounds];
-    [volumeSlider addSubview:volumeView];
-    [volumeView sizeToFit];
-    
     // share instance for audio remote control
     // Registers this class as the delegate of the audio session.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(interruption:) name:AVAudioSessionInterruptionNotification object:nil];
@@ -114,7 +112,10 @@
     
     if ([reachability isReachable]) {
         NSLog(@"Reachable");
-        [self reloadRadioStreaming];
+        // First, we check that radio was played before and should play again
+        if (shouldPlay) {
+            [self reloadRadioStreaming];
+        }
     } else {
         NSLog(@"Unreachable");
         [self pauseRadio];
@@ -160,17 +161,20 @@
 - (IBAction)playbutton {
     if (self.radiosound.rate == 1.0) {
         [self pauseCurrentTrack];
+        shouldPlay = NO;
     } else {
         [self playCurrentTrack];
+        shouldPlay = YES;
     }
 }
 
 - (IBAction)stopTapped:(id)sender {
+    shouldPlay = NO;
     [self pauseCurrentTrack];
 }
 
 - (IBAction)didTapGoRecent:(id)sender {
-    RecentSongViewController *viewController = [[RecentSongViewController alloc] init];
+    RecentSongViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RecentSongViewController"];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
     [navController.navigationBar custom];
     [self presentViewController:navController animated:YES completion:nil];
@@ -214,22 +218,27 @@
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
 }
 
+/**
+ *  NSNotification observer for AVAudioSession
+ *  Stops playback on phonecall, resumes if needed
+ *
+ *  @param notification received notofocation
+ */
 - (void)interruption:(NSNotification *)notification {
-    NSDictionary *interuptionDict = notification.userInfo;
-    NSUInteger interuptionType = (NSUInteger)[interuptionDict valueForKey:AVAudioSessionInterruptionTypeKey];
-    
-    if (interuptionType == AVAudioSessionInterruptionTypeBegan) {
-        [self beginInterruption];
+    //Check the type of notification
+    NSLog(@"Interruption notification name %@", notification.name);
+    if ([notification.name isEqualToString:AVAudioSessionInterruptionNotification]) {
+        NSLog(@"Interruption notification received %@!", notification);
+        //Check to see if it was a Begin interruption
+        if ([[notification.userInfo valueForKey:AVAudioSessionInterruptionTypeKey] isEqualToNumber:[NSNumber numberWithInt:AVAudioSessionInterruptionTypeBegan]]) {
+            [self pauseRadio];
+        } else if ([[notification.userInfo valueForKey:AVAudioSessionInterruptionTypeKey] isEqualToNumber:[NSNumber numberWithInt:AVAudioSessionInterruptionTypeEnded]]){
+            // Resume playing if needed
+            if (shouldPlay) {
+                [self playRadio];
+            }
+        }
     }
-#if __CC_PLATFORM_IOS >= 40000
-    else if (interuptionType == AVAudioSessionInterruptionTypeEnded) {
-        [self endInterruptionWithFlags:(NSUInteger)[interuptionDict valueForKey:AVAudioSessionInterruptionOptionKey]];
-    }
-#else
-    else if (interuptionType == AVAudioSessionInterruptionTypeEnded) {
-        [self endInterruption];
-    }
-#endif
 }
 
 #pragma mark - Get Feed Content
@@ -304,7 +313,43 @@
     lblTitle.text = currentSong[@"title"];
     lblArtist.text = [currentSong[@"songdescription"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *imageURL = [currentSong[@"songmedia"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    [ivCoverImage setImageWithURL:[NSURL URLWithString:imageURL]];
+    // Update with title immediatly
+    [self updateNowPlayingInfoWithTitle:lblTitle.text artist:lblArtist.text image:nil];
+    // Load image in background
+    __weak __typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
+        dispatch_async(dispatch_get_main_queue(), ^(){
+            UIImage *image = [UIImage imageWithData:imageData];
+            __typeof__(self) strongSelf = weakSelf;
+            if (strongSelf) {
+                // Update with image
+                [strongSelf->ivCoverImage setImage:image];
+                [strongSelf updateNowPlayingInfoWithTitle:strongSelf->lblTitle.text artist:strongSelf->lblArtist.text image:image];
+            }
+        });
+    });
+}
+
+#pragma mark - MPNowPlayingInfoCenter
+
+/// Updates track info on lockscreen, control center and any compatible BLE device
+- (void)updateNowPlayingInfoWithTitle:(NSString *)titleStr artist:(NSString *)artistStr image:(UIImage *)artwork {
+    NSLog(@"udate");
+    // don't pass nil, it will cause crash
+    NSMutableDictionary *playInfo = [NSMutableDictionary new];
+    if (titleStr) {
+        [playInfo setObject:titleStr forKey:MPMediaItemPropertyTitle];
+    }
+    if (artistStr) {
+        [playInfo setObject:artistStr forKey:MPMediaItemPropertyArtist];
+    }
+    if (artwork) {
+        MPMediaItemArtwork *cover = [[MPMediaItemArtwork alloc] initWithImage:artwork];
+        [playInfo setObject:cover forKey:MPMediaItemPropertyArtwork];
+    }
+    //
+    [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = playInfo;
 }
 
 @end

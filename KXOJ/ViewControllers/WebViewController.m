@@ -12,7 +12,7 @@
 @interface WebViewController () <UIWebViewDelegate>
 {
     IBOutlet UIWebView *adWebView;
-    IBOutlet UIWebView *webView;
+    IBOutlet UIWebView *mainWebView;
     IBOutlet UIActivityIndicatorView *progress;
 }
 
@@ -35,7 +35,7 @@
     [super viewWillAppear:animated];
     
     // Load web page from url.
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:WEB_URL]]];
+    [mainWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:WEB_URL]]];
 }
 
 #pragma mark - Setup Banner View
@@ -47,30 +47,49 @@
 #pragma mark - WebView Delegate Methods
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-    [progress startAnimating];
+    if (webView == mainWebView) {
+        [progress startAnimating];
+    }
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [progress stopAnimating];
+    if (webView == mainWebView) {
+        [progress stopAnimating];
+    }
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    [progress stopAnimating];
+    if (webView == mainWebView) {
+        [progress stopAnimating];
+    }
+}
+
+#pragma mark - WebView Delegate Methods
+
+- (BOOL)webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
+    if (inWeb == adWebView) {
+        if (inType == UIWebViewNavigationTypeLinkClicked) {
+            [[UIApplication sharedApplication] openURL:[inRequest URL]];
+            return NO;
+        }
+    }
+    
+    return YES;
 }
 
 #pragma mark - Button Action Methods
 
 - (IBAction)didTapGoBack:(id)sender {
-    [webView goBack];
+    [mainWebView goBack];
 }
 
 - (IBAction)didTapGoForward:(id)sender {
-    [webView goForward];
+    [mainWebView goForward];
 }
 
 - (IBAction)didTapReload:(id)sender {
     if (!progress.isAnimating) {
-        [webView reload];
+        [mainWebView reload];
     }
 }
 
