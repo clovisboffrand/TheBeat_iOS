@@ -312,23 +312,29 @@
     NSDictionary *currentSong = [feeds firstObject];
     lblTitle.text = currentSong[@"title"];
     lblArtist.text = [currentSong[@"songdescription"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    NSString *imageURL = [currentSong[@"songmedia"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     // Update with title immediatly
     [self updateNowPlayingInfoWithTitle:lblTitle.text artist:lblArtist.text image:nil];
-    // Load image in background
+    
+    NSString *imageURL = [currentSong[@"songmedia"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    UIImage *placeholder = [UIImage imageNamed:@"img_logo_full"];
+    
     __weak __typeof(self) weakSelf = self;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
-        dispatch_async(dispatch_get_main_queue(), ^(){
-            UIImage *image = [UIImage imageWithData:imageData];
-            __typeof__(self) strongSelf = weakSelf;
-            if (strongSelf) {
-                // Update with image
-                [strongSelf->ivCoverImage setImage:image];
-                [strongSelf updateNowPlayingInfoWithTitle:strongSelf->lblTitle.text artist:strongSelf->lblArtist.text image:image];
+    [ivCoverImage setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:imageURL]] placeholderImage:placeholder success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
+        __typeof__(self) strongSelf = weakSelf;
+        if (strongSelf) {
+            if (image) {
+                strongSelf->ivCoverImage.image = image;
+            } else {
+                strongSelf->ivCoverImage.image = placeholder;
             }
-        });
-    });
+            [strongSelf updateNowPlayingInfoWithTitle:strongSelf->lblTitle.text artist:strongSelf->lblArtist.text image:image];
+        }
+    } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+        __typeof__(self) strongSelf = weakSelf;
+        if (strongSelf) {
+            strongSelf->ivCoverImage.image = placeholder;
+        }
+    }];
 }
 
 #pragma mark - MPNowPlayingInfoCenter
