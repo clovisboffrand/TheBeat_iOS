@@ -92,6 +92,7 @@
 		4A4965261B5B7A4E00E4CF2D /* icn_chanel.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A4965241B5B7A4E00E4CF2D /* icn_chanel.png */; };
 		4A4965271B5B7A4E00E4CF2D /* icn_chanel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A4965251B5B7A4E00E4CF2D /* icn_chanel@2x.png */; };
 		4B27CB6F7D5727B316ECF856 /* libPods-WJRS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C723E71F41CEDB6D440FDD6D /* libPods-WJRS.a */; };
+		57EDC04A1E09C9BC00C1997C /* tempHTML in Resources */ = {isa = PBXBuildFile; fileRef = 57EDC0491E09C9BC00C1997C /* tempHTML */; };
 		B5444874137C0FE100D39757 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5444873137C0FE100D39757 /* AudioToolbox.framework */; };
 		B5444876137C0FEA00D39757 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5444875137C0FEA00D39757 /* AVFoundation.framework */; };
 		B54C4D6A1395977900995852 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54C4D691395977900995852 /* MediaPlayer.framework */; };
@@ -209,6 +210,7 @@
 		4A05E4E21B5AC97C000E7305 /* btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back@2x.png"; sourceTree = "<group>"; };
 		4A4965241B5B7A4E00E4CF2D /* icn_chanel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icn_chanel.png; sourceTree = "<group>"; };
 		4A4965251B5B7A4E00E4CF2D /* icn_chanel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icn_chanel@2x.png"; sourceTree = "<group>"; };
+		57EDC0491E09C9BC00C1997C /* tempHTML */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tempHTML; sourceTree = "<group>"; };
 		9A5702131CB53829944F3914 /* Pods-WJRS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WJRS.release.xcconfig"; path = "Pods/Target Support Files/Pods-WJRS/Pods-WJRS.release.xcconfig"; sourceTree = "<group>"; };
 		B5444873137C0FE100D39757 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B5444875137C0FEA00D39757 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -507,6 +509,7 @@
 			isa = PBXGroup;
 			children = (
 				4A05E3A41B5A2865000E7305 /* iframe.html */,
+				57EDC0491E09C9BC00C1997C /* tempHTML */,
 			);
 			path = Html;
 			sourceTree = "<group>";
@@ -590,6 +593,12 @@
 			attributes = {
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = RadioServersLLC;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 65X33U46ZY;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WJRS" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -680,6 +689,7 @@
 				090C8EAA1D2F97BE00DB3CBA /* arrow_right@2x.png in Resources */,
 				4A4965261B5B7A4E00E4CF2D /* icn_chanel.png in Resources */,
 				0910830C1D001D790088C319 /* ic_trophy.png in Resources */,
+				57EDC04A1E09C9BC00C1997C /* tempHTML in Resources */,
 				4A05E44A1B5A2865000E7305 /* call@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -770,9 +780,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Petro Rington (5UKQVUWDZ6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Petro Rington (5UKQVUWDZ6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 65X33U46ZY;
 				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -783,8 +794,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.RadioserversLLC.bristolbeat;
 				PRODUCT_NAME = "Bristol Beat";
-				PROVISIONING_PROFILE = "0e08c94d-78f5-42ee-8d32-0912901a0260";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0e08c94d-78f5-42ee-8d32-0912901a0260";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -800,10 +810,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Radioservers, LLC (65X33U46ZY)";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Radioservers, LLC (65X33U46ZY)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Radioservers, LLC (65X33U46ZY)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 65X33U46ZY;
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -813,9 +822,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.RadioserversLLC.bristolbeat;
 				PRODUCT_NAME = "Bristol Beat";
-				PROVISIONING_PROFILE = "3f61599e-7f1e-4090-9215-63bbe8e78e93";
-				"PROVISIONING_PROFILE[sdk=*]" = "3f61599e-7f1e-4090-9215-63bbe8e78e93";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3f61599e-7f1e-4090-9215-63bbe8e78e93";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";

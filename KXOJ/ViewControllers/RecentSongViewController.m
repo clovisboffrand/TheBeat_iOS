@@ -55,6 +55,7 @@
 
 - (void)addBanner {
     [_adWebView loadHTMLString:[CommonHelpers HTMLBodyOfBannerView] baseURL:nil];
+    _adWebView.scrollView.scrollEnabled = NO;
 }
 
 - (BOOL)webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {

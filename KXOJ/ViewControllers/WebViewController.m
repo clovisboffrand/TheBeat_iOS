@@ -42,6 +42,7 @@
 
 - (void)addBanner {
     [adWebView loadHTMLString:[CommonHelpers HTMLBodyOfBannerView] baseURL:nil];
+    adWebView.scrollView.scrollEnabled = NO;
 }
 
 #pragma mark - WebView Delegate Methods
