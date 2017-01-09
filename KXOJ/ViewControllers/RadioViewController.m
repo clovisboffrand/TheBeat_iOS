@@ -45,12 +45,14 @@
     
     NSString *element;
     BOOL shouldPlay; //variable indicates that playback should be enabled
+    BOOL isInterruptionActive; //variable indicates that interruption has been begun and not ended yet
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     shouldPlay = YES;
+    isInterruptionActive = NO;
     
     [self reloadRadioStreaming];
     
@@ -119,8 +121,12 @@
 #pragma mark - Reachability Observer
 
 - (void)reachabilityDidChange:(NSNotification *)notification {
-    Reachability *reachability = (Reachability *)[notification object];
+    // If audiosession is still intrerrupted - ignore reachability changes
+    if (isInterruptionActive) {
+        return;
+    }
     
+    Reachability *reachability = (Reachability *)[notification object];
     if ([reachability isReachable]) {
         NSLog(@"Reachable");
         // First, we check that radio was played before and should play again
@@ -242,8 +248,10 @@
         NSLog(@"Interruption notification received %@!", notification);
         //Check to see if it was a Begin interruption
         if ([[notification.userInfo valueForKey:AVAudioSessionInterruptionTypeKey] isEqualToNumber:[NSNumber numberWithInt:AVAudioSessionInterruptionTypeBegan]]) {
+            isInterruptionActive = YES;
             [self pauseRadio];
         } else if ([[notification.userInfo valueForKey:AVAudioSessionInterruptionTypeKey] isEqualToNumber:[NSNumber numberWithInt:AVAudioSessionInterruptionTypeEnded]]){
+            isInterruptionActive = NO;
             // Resume playing if needed
             if (shouldPlay) {
                 [self playRadio];
