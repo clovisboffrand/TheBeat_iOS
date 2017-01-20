@@ -27,14 +27,8 @@
     [self addBanner];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    // Load web page from url.
     [mainWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:WEB_URL]]];
 }
 
@@ -48,20 +42,23 @@
 #pragma mark - WebView Delegate Methods
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-    if (webView == mainWebView) {
+    if ([webView isEqual:mainWebView]) {
         [progress startAnimating];
+        [self hideHeaderScript];
     }
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    if (webView == mainWebView) {
+    if ([webView isEqual:mainWebView]) {
         [progress stopAnimating];
+        [self hideHeaderScript];
     }
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    if (webView == mainWebView) {
+    if ([webView isEqual:mainWebView]) {
         [progress stopAnimating];
+        [self hideHeaderScript];
     }
 }
 
@@ -92,6 +89,14 @@
     if (!progress.isAnimating) {
         [mainWebView reload];
     }
+}
+
+#pragma mark - Other
+
+/// hiding page header (app rejection issue)
+- (void)hideHeaderScript {
+    NSString *script = [NSString stringWithFormat:@"document.getElementById(\"header-wrapper\").style.display='none';"];
+    [mainWebView stringByEvaluatingJavaScriptFromString:script];
 }
 
 @end

@@ -36,14 +36,17 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     [progress startAnimating];
+    [self hideHeaderScript];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [progress stopAnimating];
+    [self hideHeaderScript];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     [progress stopAnimating];
+    [self hideHeaderScript];
 }
 
 #pragma mark - Button Action Methods
@@ -64,6 +67,14 @@
     if (!progress.isAnimating) {
         [webView reload];
     }
+}
+
+#pragma mark - Other
+
+/// hiding page header (app rejection issue)
+- (void)hideHeaderScript {
+    NSString *script = [NSString stringWithFormat:@"document.getElementById(\"header-wrapper\").style.display='none';"];
+    [webView stringByEvaluatingJavaScriptFromString:script];
 }
 
 @end
